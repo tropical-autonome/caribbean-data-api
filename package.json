@@ -1,0 +1,37 @@
+{
+  "name": "tropical-data-api",
+  "version": "1.0.0",
+  "description": "API de données structurées monétisées via x402 pour agents IA - Tropical Autonome",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test": "jest",
+    "lint": "eslint src/",
+    "seed": "node scripts/seed-kv.js"
+  },
+  "dependencies": {
+    "x402": "^1.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0",
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0"
+  },
+  "keywords": [
+    "x402",
+    "http402",
+    "stablecoin",
+    "usdc",
+    "ai-agents",
+    "data-api",
+    "guadeloupe",
+    "dom",
+    "solar",
+    "energie-solaire",
+    "zni"
+  ],
+  "author": "Frederick Martel <tropicalautonome@gmail.com>",
+  "license": "UNLICENSED"
+}

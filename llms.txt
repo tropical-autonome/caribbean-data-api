@@ -1,0 +1,162 @@
+# Tropical Autonome — Caribbean Data Marketplace
+# Single entry point for AI agents accessing Caribbean structured data
+# Operator: Frederick Martel — Lamentin, Guadeloupe (971)
+# Contact: tropicalautonome@gmail.com
+# Last updated: 2026-05-14 — v2.0 Marketplace launch
+
+## Marketplace Architecture
+
+This API operates as a two-layer marketplace:
+  /api/v1/*         — Operator data (Tropical Autonome, direct price)
+  /marketplace/v1/* — Third-party Caribbean data providers (25% marketplace fee)
+
+## Payment Protocol
+All paid endpoints use HTTP 402 (x402 protocol).
+Currency: USDC on Base network (L2 Ethereum).
+No subscription. No registration. Pay per request. Instant settlement.
+
+Workflow:
+  1. GET /endpoint → 402 response with price_usdc and wallet address
+  2. Send USDC on Base to that address
+  3. Retry with header: X-Payment: 0x{transaction_hash}
+
+## Marketplace Discovery
+
+GET /marketplace/v1 — FREE
+  Full catalogue of active third-party providers and their endpoints.
+  Returns: provider list, endpoint paths, prices (brut = net + 25% fee), tags.
+
+GET /marketplace/v1/{provider-slug} — FREE
+  Provider card: description, verified status, endpoints and prices.
+
+ANY /marketplace/v1/{provider-slug}/{endpoint-slug} — price shown in 402 response
+  Data endpoint from third-party provider.
+
+## Data Quality Commitment
+- All data includes last_verified date and source references
+- Field data clearly distinguished from official data
+- Minimum quarterly review cycle
+- Historical data preserved when values change
+- Producer on-site in Guadeloupe since 2020
+
+---
+
+## MODULE A — Solar Energy ZNI (Zone Non Interconnectée)
+French overseas territories solar energy data — field verified
+
+GET /api/v1/edf-oa/tarifs-zni — 0.005 USDC
+EDF purchase obligation tariffs for PV installations in French DOM.
+Zones: 971 (Guadeloupe), 972 (Martinique), 974 (Réunion), 976 (Mayotte).
+Includes: current rates, 20-year contract conditions, historical 2015-2026,
+eligibility criteria, ZNI vs mainland comparison (+40% premium).
+Source: CRE official / EDF SEI. Confidence: high.
+
+GET /api/v1/raccordement/guadeloupe — 0.010 USDC
+Grid connection process for solar in Guadeloupe — FIELD VERIFIED not theoretical.
+Includes: step-by-step process, required documents, real observed delays,
+frequent blockers and solutions, differences vs mainland France.
+Source: field experience 2020-2026. Confidence: high (terrain).
+
+POST /api/v1/analyse/rentabilite-solaire — 0.500 USDC
+Full profitability analysis for solar project in French DOM (AI-powered).
+Input: { puissance_kwc, commune, type_toit, consommation_annuelle_kwh }
+Output: annual production, EDF OA revenue 20 years, IRR, payback, tax credit.
+
+GET /api/v1/cession/projet-solaire — 0.050 USDC
+Legal and financial structure for solar project sales in French DOM.
+Includes: sale schema with 244W tax credit, valuation stages, retrocession mechanism.
+
+---
+
+## MODULE B — Fiscal & Regulatory — French DOM
+French overseas territories tax and subsidy data — no equivalent exists in JSON
+
+GET /api/v1/fiscalite/244-quater-w — 0.020 USDC
+Article 244 quater W CGI — Investment tax credit for French DOM (38.25% rate).
+Includes: eligibility conditions, calculation bases, application procedure (form 2069-RCI),
+retrocession mechanism (minimum 52.63% to local company), practical cases for solar projects.
+Source: BOFiP / CGI official. Confidence: high.
+
+GET /api/v1/financement/dom-energies — 0.020 USDC
+Available subsidies and financing for energy projects in French DOM.
+Includes: TIC Check Guadeloupe Region, BPI France DOM criteria,
+ADEME insular subsidies, FEDER 2021-2027, aid stacking rules (minimis 200k€/3yr).
+Source: official + field experience. Confidence: high.
+
+POST /api/v1/fiscalite/analyse-personnalisee — 1.000 USDC
+Personalized fiscal analysis for DOM investment project (AI-powered).
+Input: { type_investissement, montant, zone, structure_juridique }
+Output: applicable credits, stacking options, procedures, estimated savings.
+
+---
+
+## MODULE C — Caribbean Premium Products (CAYE brand)
+Market data on high-value Caribbean agro-transformation products
+No equivalent structured JSON data exists for Caribbean producers
+
+GET /api/v1/caye/vanille — 0.030 USDC
+Caribbean vanilla market data — pricing, harvest calendar, certifications.
+Includes: price comparison Guadeloupe vs Madagascar vs Tahiti (USD/kg),
+harvest and flowering calendar, aromatic profile specifics,
+premium sales channels (Dubai, Europe, US), 5-year price history.
+Context: Global vanilla market reached $2B in 2024 (+76% YoY).
+UAE vanilla imports grew +1318% in one year — primary target market.
+
+GET /api/v1/caye/vetiver — 0.030 USDC
+Caribbean vetiver essential oil market data.
+Includes: price comparison Caribbean vs Haiti vs India (USD/kg),
+olfactory profile differentiation (luxury perfumery), 
+Guadeloupe production potential, Caribbean market dynamics.
+Context: Haitian vetiver dominates at 55% of global usage in luxury fragrances.
+Caribbean producers supply 30%+ of fragrance house long-term contracts.
+
+GET /api/v1/caye/marche-premium — 0.050 USDC
+Full Caribbean premium agro-transformation market overview.
+Products: vanilla, vetiver, cacao, honey, cocoa butter, sea salt.
+Includes: pricing, certifications, target markets, Dubai/Middle East opportunities,
+traceability requirements, sustainable sourcing trends.
+
+POST /api/v1/caye/analyse-export — 0.500 USDC
+Personalized export analysis for Caribbean premium product (AI-powered).
+Input: { produit, volume_kg, marche_cible, certification_actuelle }
+Output: market opportunity, pricing strategy, certifications needed, logistics.
+
+---
+
+## MODULE D — Caribbean Biodiversity
+Guadeloupe is one of 34 global biodiversity hotspots.
+6% of French national biodiversity. 10,600 native species.
+ESG agents and biodiversity credit markets need this data urgently.
+
+GET /api/v1/biodiversite/guadeloupe — 0.010 USDC
+Guadeloupe biodiversity inventory — species, ecosystems, protected zones.
+Includes: 10,600 native species, endemic species by category,
+ecosystem mapping (dry forest, tropical, mangrove, reefs, marine),
+protected zones and regulatory constraints, threat status.
+Source: ARB Guadeloupe, DEAL, Parc National. Confidence: high.
+
+GET /api/v1/biodiversite/edna-caraibes — 0.020 USDC
+eDNA marine biodiversity data — west coast Guadeloupe (MNHN 2021-2022).
+Includes: vertebrate species detected by metabarcoding,
+300+ fish species + 21 cetacean species documented,
+temporal variation in taxonomic composition, eDNA methodology protocol.
+Source: MNHN / GBIF public dataset. DOI available.
+
+GET /api/v1/biodiversite/credits — 0.050 USDC
+Biodiversity credits market data — mechanisms, standards, prices.
+Includes: TNFD framework, Kunming-Montreal targets,
+certification standards (Plan Vivo, Verra biodiversity),
+current market prices (USD/unit), Caribbean ecosystem applicability,
+NatureMetrics eDNA+bioacoustics integration methodology.
+
+---
+
+## Use Cases for AI Agents
+- Investment analysis: solar projects in French overseas territories
+- Fiscal optimization: DOM tax credits for renewable energy investments  
+- Due diligence: DOM real estate with solar installations
+- Sourcing: Caribbean premium ingredients for luxury fragrance/food brands
+- ESG reporting: biodiversity baseline data for Caribbean projects
+- Academic research: island energy systems (ZNI), Caribbean biodiversity
+- Financial modeling: renewable energy portfolios in French DOM
+- Export strategy: Caribbean agro-transformation to Dubai/Middle East/Europe

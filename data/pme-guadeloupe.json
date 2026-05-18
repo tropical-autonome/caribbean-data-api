@@ -1,0 +1,191 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-17",
+  "update_frequency": "quarterly",
+  "source_type": "market_data + institutional + field_experience",
+  "sources": [
+    { "name": "INSEE — Répertoire SIRENE Guadeloupe 2024" },
+    { "name": "CCI Guadeloupe — Tableau de bord économique 2024" },
+    { "name": "IEDOM — Rapport annuel Guadeloupe 2024" },
+    { "name": "DIECCTE Guadeloupe — Emploi et entreprises 2023-2024" },
+    { "name": "BPI France DOM — Portefeuille PME Guadeloupe 2024" },
+    { "name": "Tropical Autonome — réseau terrain entrepreneurs Guadeloupe 2022-2025", "type": "field_experience" }
+  ],
+  "disclaimer": "Données issues de sources institutionnelles et terrain. Profils sectoriels à titre indicatif. Vérifier auprès de la CCI Guadeloupe pour données à jour.",
+  "data": {
+    "vue_generale": {
+      "total_entreprises_actives": 42000,
+      "dont_micro_entreprises_pct": 68,
+      "dont_tpe_1_9_salaries_pct": 24,
+      "dont_pme_10_249_salaries_pct": 7,
+      "dont_eti_grandes_pct": 1,
+      "pib_guadeloupe_milliards_eur": 9.8,
+      "taux_chomage_pct": 19.2,
+      "population_active": 160000,
+      "note": "Tissu économique dominé par les TPE/micro-entreprises. Fort taux de création mais mortalité élevée à 3 ans (42%)."
+    },
+
+    "secteurs_principaux": {
+      "btp_construction": {
+        "rang": 1,
+        "nb_entreprises": 4800,
+        "emplois_directs": 12000,
+        "ca_moyen_tpe_eur": 180000,
+        "ca_moyen_pme_eur": 2200000,
+        "tendance": "Croissance soutenue — programmes de rénovation énergétique + logements sociaux DEAL",
+        "opportunites_b2b": [
+          "Rénovation énergétique (prime CEE, MaPrimeRénov DOM)",
+          "Solaire photovoltaïque résidentiel",
+          "Marchés publics EPLA, Région, Département"
+        ],
+        "acteurs_cles": [
+          { "nom": "Guadeloupe BTP", "role": "Fédération professionnelle" },
+          { "nom": "CAPEB 971", "role": "Artisans du bâtiment" }
+        ]
+      },
+
+      "commerce_detail": {
+        "rang": 2,
+        "nb_entreprises": 9200,
+        "emplois_directs": 22000,
+        "ca_moyen_eur": 320000,
+        "tendance": "Pression concurrentielle des grandes surfaces + e-commerce. Circuits courts en croissance.",
+        "zones_commerciales_principales": [
+          { "nom": "Jarry (Baie-Mahault)", "type": "Zone industrielle + commerciale", "nb_entreprises": 1400 },
+          { "nom": "Pointe-à-Pitre centre", "type": "Commerce de proximité", "nb_entreprises": 800 },
+          { "nom": "Les Abymes (Grand Camp)", "type": "Périurbain", "nb_entreprises": 600 }
+        ]
+      },
+
+      "restauration_hotellerie": {
+        "rang": 3,
+        "nb_entreprises": 3100,
+        "emplois_directs": 9500,
+        "ca_moyen_restaurant_eur": 240000,
+        "ca_moyen_hotel_eur": 850000,
+        "tendance": "Forte reprise post-Covid. Manque de personnel qualifié. Montée en gamme éco-tourisme.",
+        "segments_porteurs": [
+          "Gîtes et chambres d'hôtes (croissance +18%/an)",
+          "Restauration gastronomique créole premium",
+          "Traiteur événementiel"
+        ]
+      },
+
+      "agriculture_agroalimentaire": {
+        "rang": 4,
+        "nb_entreprises": 5600,
+        "emplois_directs": 14000,
+        "ca_moyen_eur": 95000,
+        "productions_principales": ["Banane", "Canne à sucre", "Maraîchage", "Élevage bovin"],
+        "tendance": "Diversification vers circuits courts et agro-transformation. Agrivoltaïsme émergent.",
+        "acteurs_transformation": [
+          { "nom": "SICA Kap Nò", "specialite": "Fruits exotiques export" },
+          { "nom": "Distilleries Reimonenq / Bielle", "specialite": "Rhum agricole AOC" }
+        ]
+      },
+
+      "services_aux_entreprises": {
+        "rang": 5,
+        "nb_entreprises": 6800,
+        "emplois_directs": 18000,
+        "sous_secteurs": [
+          { "nom": "Comptabilité / expertise-comptable", "nb_cabinets": 180, "note": "Marché saturé — différenciation par spécialisation DOM" },
+          { "nom": "Conseil en gestion / stratégie", "nb_cabinets": 95 },
+          { "nom": "Informatique / digital", "nb_entreprises": 320, "tendance": "Forte croissance — transformation numérique PME" },
+          { "nom": "Sécurité privée", "nb_entreprises": 85, "note": "Marché porteur — insécurité en hausse" }
+        ]
+      },
+
+      "energies_renouvelables": {
+        "rang": 6,
+        "nb_entreprises": 420,
+        "emplois_directs": 2800,
+        "ca_moyen_installateur_eur": 650000,
+        "tendance": "Croissance explosive — objectif 100% ENR Guadeloupe 2030 (loi EROM)",
+        "acteurs_locaux": [
+          { "nom": "Solewa", "specialite": "Installateur solaire résidentiel + C&I" },
+          { "nom": "Vergnet Guadeloupe", "specialite": "Éolien + hybride" },
+          { "nom": "SER Guadeloupe", "specialite": "Études + maîtrise d'œuvre ENR" }
+        ],
+        "opportunites": [
+          "Installateurs RGE manquent de main d'œuvre qualifiée",
+          "Agrivoltaïsme — marché naissant",
+          "Stockage batterie résidentiel (autoconsommation)"
+        ]
+      }
+    },
+
+    "profils_typiques_pme": {
+      "installateur_solaire": {
+        "secteur": "ENR",
+        "effectif_typique": "5-15 salariés",
+        "ca_annuel_eur": 800000,
+        "marge_brute_pct": 28,
+        "points_de_douleur": [
+          "Délais raccordement EDF SEI (6-18 mois)",
+          "Accès au crédit pour les stocks de matériel",
+          "Recrutement électriciens RGE"
+        ],
+        "besoins_b2b": ["Financement matériel", "Leads qualifiés", "Logiciel de chiffrage"]
+      },
+      "restaurateur_premium": {
+        "secteur": "Restauration",
+        "effectif_typique": "3-8 salariés",
+        "ca_annuel_eur": 380000,
+        "marge_brute_pct": 65,
+        "points_de_douleur": [
+          "Approvisionnement irrégulier poisson/fruits de mer",
+          "Turn-over personnel (impact charges)",
+          "Visibilité en ligne insuffisante"
+        ],
+        "besoins_b2b": ["Circuit court poisson", "Marketing digital", "Formation personnel"]
+      },
+      "promoteur_immobilier_local": {
+        "secteur": "BTP / Immobilier",
+        "effectif_typique": "2-5 salariés",
+        "ca_annuel_eur": 1500000,
+        "marge_brute_pct": 15,
+        "points_de_douleur": [
+          "Accès au foncier (SAFER, prix élevés)",
+          "Délais permis de construire (12-24 mois)",
+          "Financement bancaire difficile"
+        ],
+        "besoins_b2b": ["Foncier disponible", "Montage défiscalisation Girardin", "Assurance DO"]
+      }
+    },
+
+    "reseaux_institutionnels": {
+      "cci_guadeloupe": {
+        "role": "Accompagnement création, développement, international",
+        "services": ["Formalités entreprises", "Formation", "Export", "Financement"],
+        "web": "guadeloupe.cci.fr",
+        "tel": "0590 93 76 00"
+      },
+      "bpi_france_guadeloupe": {
+        "role": "Financement innovation, garanties, prêts PME",
+        "antenne": "Pointe-à-Pitre",
+        "web": "bpifrance.fr"
+      },
+      "medef_guadeloupe": {
+        "role": "Représentation patronale",
+        "web": "medef-guadeloupe.com"
+      },
+      "initiative_guadeloupe": {
+        "role": "Prêts d'honneur 0% création/reprise (5 000 - 50 000€)",
+        "web": "initiative-guadeloupe.fr"
+      }
+    },
+
+    "tendances_2025_2026": [
+      { "tendance": "Transition énergétique", "impact": "Fort — 100% ENR 2030 = 10 000 emplois ENR estimés" },
+      { "tendance": "Numérique / IA", "impact": "Moyen — retard digital des PME = opportunité conseil/intégration" },
+      { "tendance": "Souveraineté alimentaire", "impact": "Fort — plan AGRESTE 2030, circuits courts, transformation locale" },
+      { "tendance": "Tourisme durable", "impact": "Croissant — labels éco, clientèle premium internationale" },
+      { "tendance": "Vieillissement population", "impact": "Moyen — services à la personne, silver economy" }
+    ],
+
+    "changelog": [
+      { "date": "2026-05-17", "modification": "Création initiale — données INSEE + CCI + IEDOM + terrain Tropical Autonome", "auteur": "Tropical Autonome" }
+    ]
+  }
+}

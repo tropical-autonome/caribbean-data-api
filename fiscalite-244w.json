@@ -1,0 +1,131 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-13",
+  "verified_by": "Frederick Martel — Tropical Autonome",
+  "sources": [
+    {
+      "name": "BOFiP — Bulletin Officiel des Finances Publiques",
+      "url": "https://bofip.impots.gouv.fr",
+      "reference": "BOI-IS-RICI-10-10",
+      "consulted": "2026-05-13"
+    },
+    {
+      "name": "Code Général des Impôts — Article 244 quater W",
+      "url": "https://www.legifrance.gouv.fr",
+      "consulted": "2026-05-13"
+    }
+  ],
+  "update_frequency": "annual",
+  "next_review": "2027-01-01",
+  "source_type": "official",
+  "confidence": "high",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-05-13",
+      "note": "Création initiale — à enrichir avec données BOFiP complètes"
+    }
+  ],
+  "disclaimer": "Données à titre informatif uniquement. Ne constitue pas un conseil fiscal. Consulter un expert-comptable ou conseiller fiscal avant toute décision d'investissement.",
+  "data": {
+    "nom": "Crédit d'impôt pour investissements en outre-mer — Article 244 quater W CGI",
+    "objectif": "Encourager les investissements productifs dans les DOM-TOM français en accordant un crédit d'impôt sur les investissements réalisés",
+    "taux_credit_impot": {
+      "taux_base": 0.3825,
+      "taux_base_pct": "38.25%",
+      "note": "Taux applicable aux investissements productifs en secteurs éligibles",
+      "majorations_possibles": [
+        {
+          "condition": "Investissement dans un secteur prioritaire (énergies renouvelables)",
+          "majoration": "+10 points",
+          "taux_total": "48.25%"
+        },
+        {
+          "condition": "PME investissant dans certains secteurs",
+          "majoration": "Variable selon LOI DE FINANCES — vérifier chaque année"
+        }
+      ]
+    },
+    "beneficiaires_eligibles": {
+      "types_entreprises": [
+        "Entreprises soumises à l'impôt sur les sociétés (IS)",
+        "Entreprises soumises à l'impôt sur le revenu (IR) dans la catégorie BIC",
+        "Entreprises soumises à l'IR dans la catégorie BA (agricole)"
+      ],
+      "conditions": [
+        "Exercer une activité dans un DOM (Guadeloupe 971, Martinique 972, Guyane 973, La Réunion 974, Mayotte 976)",
+        "Réaliser un investissement productif neuf",
+        "Conserver l'investissement au moins 5 ans (7 ans pour les navires)"
+      ],
+      "exclusions": [
+        "Commerce et négoce (sauf conditions particulières)",
+        "Banque et assurance",
+        "Professions libérales réglementées"
+      ]
+    },
+    "investissements_eligibles": {
+      "secteurs_prioritaires": [
+        "Énergies renouvelables (solaire photovoltaïque, éolien, biomasse)",
+        "Agriculture et agro-transformation",
+        "Tourisme",
+        "Pêche et aquaculture",
+        "Industrie"
+      ],
+      "types_investissements": [
+        "Matériels et outillages",
+        "Installations et équipements",
+        "Constructions à usage professionnel",
+        "Rénovation d'hôtels classés"
+      ],
+      "montant_minimum": "Pas de seuil minimum légal (vérifier par secteur)"
+    },
+    "mecanisme_retrocession": {
+      "description": "Quand l'investisseur (bailleur) n'est pas l'exploitant, il doit rétrocéder une partie du crédit d'impôt à l'entreprise locale exploitante",
+      "taux_retrocession_minimum_legal": 0.6667,
+      "taux_retrocession_minimum_pct": "66.67% du crédit d'impôt",
+      "note_pratique": "En pratique, la retrocession est souvent de 75% à 85% pour attirer les investisseurs",
+      "interet_pour_vendeur_projet": "Un porteur de projet peut vendre son projet à un investisseur fiscal (ex: groupe ou particulier cherchant crédit d'impôt) — voir module cession-projet-solaire",
+      "exemple_calcul": {
+        "investissement_ht": 100000,
+        "credit_impot_38pct": 38250,
+        "retrocession_66pct": 25485,
+        "avantage_net_investisseur": 12765,
+        "unite": "EUR"
+      }
+    },
+    "procedure_demande": {
+      "formulaire": "Formulaire 2069-RCI — Réductions et crédits d'impôt",
+      "depot": "Joint à la déclaration annuelle d'IS (formulaire 2065) ou IR",
+      "agrement_prealable": {
+        "requis": true,
+        "seuil_agrement": "Investissements > 250 000€ nécessitent un agrément préalable du Ministère des Finances",
+        "delai_agrement": "3 à 6 mois en pratique",
+        "dossier": "Dossier à déposer auprès de la Direction Générale des Finances Publiques"
+      },
+      "delai_remboursement": {
+        "excedent_IS": "Remboursable immédiatement si crédit > IS dû",
+        "delai_virement": "2 à 4 mois après dépôt de la déclaration"
+      }
+    },
+    "cas_pratique_solaire": {
+      "scenario": "Installation solaire 20 kWc en Guadeloupe — vente du projet avec credit d'impot",
+      "cout_installation_ht": 28000,
+      "credit_impot_38pct": 10710,
+      "valeur_credit_pour_acheteur": 10710,
+      "prix_cession_projet": "Entre 25 000€ et 32 000€ selon le profil de l'investisseur",
+      "avantage_acheteur": "Récupère 10 710€ de crédit d'impôt + revenus EDF OA 20 ans",
+      "avantage_vendeur": "Prix de cession supérieur au coût d'installation",
+      "note": "Exemple basé sur expérience terrain — à valider avec expert-comptable"
+    },
+    "liens_utiles": [
+      {
+        "nom": "BOFiP — texte complet",
+        "url": "https://bofip.impots.gouv.fr/bofip/1080-PGP.html"
+      },
+      {
+        "nom": "Légifrance — Article 244 quater W",
+        "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044987407"
+      }
+    ]
+  }
+}

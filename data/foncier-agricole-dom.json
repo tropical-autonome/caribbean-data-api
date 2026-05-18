@@ -1,0 +1,155 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-15",
+  "update_frequency": "quarterly",
+  "source_type": "market_data + regulatory + field_experience",
+  "sources": [
+    { "name": "SAFER Antilles-Guyane — données transactions foncières 2023-2025" },
+    { "name": "DAAF Guadeloupe — Recensement Agricole 2020" },
+    { "name": "DAAF Martinique — Tableau de bord foncier 2024" },
+    { "name": "DAF La Réunion — Observatoire foncier agricole 2024" },
+    { "name": "EPF Guadeloupe — Établissement Public Foncier" },
+    { "name": "Tropical Autonome — terrain projets agrivoltaïques 2022-2025", "type": "field_experience" }
+  ],
+  "disclaimer": "Prix indicatifs — varient selon localisation précise, état des terres, accès eau et électricité. Consulter SAFER avant toute transaction. Données terrain 2022-2025.",
+  "data": {
+    "vue_generale": {
+      "surface_agricole_utile_guadeloupe_ha": 26000,
+      "surface_agricole_utile_martinique_ha": 21000,
+      "surface_agricole_utile_reunion_ha": 43000,
+      "tendance": "Pression foncière forte en Guadeloupe (urbanisation + projets ENR). SAU en recul de 1.2%/an sur 10 ans.",
+      "opportunite_agrivoltaisme": "Forte — projets combinant agriculture + panneaux solaires bénéficient de deux revenus (loyer solaire 1 500-3 000€/ha/an + production agricole)"
+    },
+
+    "prix_foncier_par_territoire": {
+      "guadeloupe": {
+        "prix_moyen_terres_agricoles_eur_ha": {
+          "grande_terre_canne": 8000,
+          "basse_terre_banane": 12000,
+          "basse_terre_foret_degradee": 4000,
+          "maraichage_periurbain": 18000,
+          "friche_reconvertible": 6000
+        },
+        "prix_location_eur_ha_an": {
+          "canne_a_sucre": 350,
+          "banane": 600,
+          "maraichage": 900,
+          "agrivoltaisme_loyer_solaire": { "min": 1500, "max": 3000, "note": "Loyer versé par développeur ENR au propriétaire/exploitant" }
+        },
+        "zones_disponibles_prioritaires": [
+          { "zone": "Nord Grande-Terre (Anse-Bertrand, Port-Louis)", "surface_estimee_ha": 800, "type": "friches canne", "interet": "Fort pour agrivoltaïsme — irradiation excellente, accès réseau" },
+          { "zone": "Marie-Galante", "surface_estimee_ha": 1200, "type": "canne en déclin", "interet": "Très fort — île autonome en énergie potentielle, SAU disponible" },
+          { "zone": "Morne-à-l'Eau / Baie-Mahault", "surface_estimee_ha": 400, "type": "maraîchage extensif", "interet": "Moyen — pression urbaine forte mais potentiel circuits courts" }
+        ]
+      },
+      "martinique": {
+        "prix_moyen_terres_agricoles_eur_ha": {
+          "nord_atlantique_banane": 14000,
+          "centre_canne": 7500,
+          "sud_maraichage": 16000,
+          "friche_reconvertible": 5500
+        },
+        "prix_location_eur_ha_an": {
+          "banane": 700,
+          "canne": 380,
+          "agrivoltaisme_loyer_solaire": { "min": 1800, "max": 3500 }
+        }
+      },
+      "la_reunion": {
+        "prix_moyen_terres_agricoles_eur_ha": {
+          "hauts_canne": 5000,
+          "bas_maraichage": 22000,
+          "geranium_vetiver_altitude": 3500
+        },
+        "prix_location_eur_ha_an": {
+          "canne": 420,
+          "maraichage_hauts": 600,
+          "agrivoltaisme_loyer_solaire": { "min": 1200, "max": 2500, "note": "Contraintes réseau plus importantes qu'en Guadeloupe" }
+        }
+      }
+    },
+
+    "cadre_reglementaire": {
+      "safer_antilles_guyane": {
+        "role": "Préemption et régulation du marché foncier agricole. Notifier SAFER avant toute vente de terres agricoles.",
+        "droit_preemption": "SAFER peut se substituer à l'acheteur si prix anormal ou si l'usage agricole n'est pas garanti",
+        "contact": "safer.antilles@safer.fr",
+        "delai_instruction": "2 mois après notification obligatoire"
+      },
+      "agrivoltaisme": {
+        "cadre_legal": "Décret 2024-318 du 8 avril 2024 — définit l'agrivoltaïsme en France",
+        "conditions": [
+          "La production agricole doit rester l'activité principale (contrôle annuel)",
+          "Taux de couverture du sol par panneaux limité (variable selon type de culture)",
+          "Absence de dégradation significative de la production agricole",
+          "Réversibilité du projet garantie"
+        ],
+        "avantages_dom": [
+          "Éligibilité aux tarifs OA renforcés pour agrivoltaïsme ZNI",
+          "Cumul aide PAC + revenu loyer solaire possible",
+          "Priorité raccordement réseau dans certaines zones ZNI"
+        ]
+      },
+      "contraintes_environnementales": {
+        "zones_interdites": ["Parc National de Guadeloupe (zone cœur)", "Réserves Naturelles", "Zones Natura 2000 strictes"],
+        "zones_sous_conditions": ["Zones humides (étude impact renforcée)", "ZNIEFF type 1", "Bande littorale 100m loi littoral"],
+        "plu_zu_a": "Vérifier classement Zone Agricole (A) ou Zone Urbaine (U) dans PLU communal avant tout projet"
+      }
+    },
+
+    "dispositifs_aide_installation": {
+      "dotation_installation_jeunes_agriculteurs": {
+        "montant_guadeloupe_eur": 80000,
+        "conditions": "Moins de 40 ans, plan de développement viable, formation agricole",
+        "majoration_dom": "+20% par rapport à la métropole"
+      },
+      "prêt_installation_dom": {
+        "taux": "0%",
+        "montant_max_eur": 200000,
+        "duree_ans": 15,
+        "organisme": "Crédit Agricole + BPI France garantie"
+      },
+      "fonds_europeen_feader": {
+        "programme": "FEADER 2023-2027 Guadeloupe",
+        "taux_aide_installation": "75% coût projet éligible (max 100 000€)",
+        "axes_prioritaires": ["Agroécologie", "Agriculture biologique", "Agrivoltaïsme", "Circuits courts"]
+      },
+      "exoneration_charges_dom": {
+        "detail": "Exonération partielle charges patronales 5 ans pour nouvelle exploitation agricole DOM",
+        "source": "LODEOM — Loi pour le Développement Économique des Outre-Mer"
+      }
+    },
+
+    "contacts_cles": {
+      "foncier": [
+        { "organisme": "SAFER Antilles-Guyane", "role": "Transactions foncières", "email": "safer.antilles@safer.fr" },
+        { "organisme": "EPF Guadeloupe", "role": "Établissement Public Foncier", "web": "epf-guadeloupe.fr" },
+        { "organisme": "DAAF Guadeloupe", "role": "Direction Agriculture", "tel": "0590 99 09 09" }
+      ],
+      "agrivoltaisme": [
+        { "organisme": "EDF SEI Guadeloupe", "role": "Raccordement + tarif OA", "web": "edf.fr/sei" },
+        { "organisme": "CRE", "role": "Appels d'offres ENR + agrivoltaïsme", "web": "cre.fr" }
+      ]
+    },
+
+    "cas_pratiques": {
+      "projet_agrivoltaisme_10ha": {
+        "surface_ha": 10,
+        "localisation": "Nord Grande-Terre, Guadeloupe",
+        "puissance_mwc_estimee": 5,
+        "revenus_annuels_estimes": {
+          "loyer_solaire_eur": 20000,
+          "production_agricole_maraichage_eur": 35000,
+          "total_eur": 55000
+        },
+        "investissement_initial_eur": 450000,
+        "retour_investissement_ans": 8,
+        "aides_mobilisables": ["Crédit impôt 244W (38.25% investissement)", "FEADER (75% équipements)", "Exo charges DOM 5 ans"]
+      }
+    },
+
+    "changelog": [
+      { "date": "2026-05-15", "modification": "Création initiale — données SAFER + DAAF + terrain Tropical Autonome", "auteur": "Tropical Autonome" }
+    ]
+  }
+}

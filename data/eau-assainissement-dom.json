@@ -1,0 +1,192 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-17",
+  "update_frequency": "semi-annual",
+  "source_type": "institutional + regulatory + field_experience",
+  "sources": [
+    { "name": "DEAL Guadeloupe — État des services d'eau potable et assainissement 2024" },
+    { "name": "ARPEGE — Autorité de Régulation de la Performance des services d'Eau et de Gestion des Eaux pluviales — Rapport DOM 2024" },
+    { "name": "ONEMA / OFB — Observatoire national services eau et assainissement 2023" },
+    { "name": "Cour des Comptes — Rapport eau Guadeloupe 2023" },
+    { "name": "AFD — Projets eau Caraïbes 2022-2026" },
+    { "name": "Tropical Autonome — terrain collectivités et ingénieurs Guadeloupe 2022-2025", "type": "field_experience" }
+  ],
+  "disclaimer": "Données institutionnelles — situation en évolution rapide en Guadeloupe (crise eau en cours depuis 2017). Vérifier auprès de la DEAL et du SMGEAG pour l'état actuel des chantiers.",
+  "data": {
+    "vue_generale": {
+      "contexte": "La Guadeloupe traverse une crise structurelle de l'eau potable depuis 2017 — réseau vétuste (60% pertes), gouvernance fragmentée, dette des opérateurs. Un plan de refonte majeur est en cours (2022-2030).",
+      "investissements_planifies_milliards_eur": 1.2,
+      "periode_plan": "2022-2030",
+      "financeurs": ["État (DGOM)", "Région Guadeloupe", "UE (FEDER)", "AFD", "OFB"],
+      "operateur_depuis_2022": "SMGEAG — Syndicat Mixte de Gestion de l'Eau et de l'Assainissement de Guadeloupe"
+    },
+
+    "eau_potable": {
+      "guadeloupe": {
+        "population_desservie": 395000,
+        "taux_acces_eau_courante_pct": 97,
+        "taux_conformite_eau_potable_pct": 78,
+        "problematique": "Eau conforme au robinet mais coupures fréquentes (30-50 jours/an en moyenne dans certaines communes). Chlore excessif dans distribution.",
+        "pertes_reseau_pct": 60,
+        "objectif_pertes_2030_pct": 25,
+        "longueur_reseau_km": 4200,
+        "age_moyen_canalisations_ans": 45,
+        "production_eau_m3_jour": 175000,
+        "besoins_m3_jour": 290000,
+        "deficit_explique_par": ["Pertes réseau (60%)", "Population mal desservie (3%)", "Fuites branchements privés"],
+        "communes_critiques": [
+          { "commune": "Pointe-à-Pitre", "probleme": "Réseau très ancien — coupures fréquentes", "priorite": "Urgente" },
+          { "commune": "Les Abymes", "probleme": "Insuffisance capacité traitement", "priorite": "Haute" },
+          { "commune": "Capesterre-Belle-Eau", "probleme": "Contamination chlordécone historique — suivi renforcé", "priorite": "Haute" },
+          { "commune": "Marie-Galante", "probleme": "Réseau insulaire isolé — vulnérabilité cyclonique", "priorite": "Haute" }
+        ],
+        "sources_eau": [
+          { "type": "Rivières et captages surface", "part_pct": 72, "principale": "Grande Rivière Goyave, Rivière Sens" },
+          { "type": "Nappes phréatiques", "part_pct": 20 },
+          { "type": "Dessalement (SWRO)", "part_pct": 8, "note": "Capacité à doubler d'ici 2028 — appels d'offres en cours" }
+        ]
+      },
+      "martinique": {
+        "population_desservie": 360000,
+        "taux_acces_eau_courante_pct": 99,
+        "taux_conformite_eau_potable_pct": 93,
+        "pertes_reseau_pct": 38,
+        "operateur": "SME Martinique (Syndicat Martiniquais de l'Eau)",
+        "situation": "Plus stable que Guadeloupe mais réseau vieillissant — plan rénovation 2025-2030"
+      },
+      "la_reunion": {
+        "population_desservie": 900000,
+        "taux_conformite_eau_potable_pct": 99,
+        "pertes_reseau_pct": 22,
+        "situation": "Meilleure DOM — gestion intercommunale efficace, investissements réguliers"
+      },
+      "mayotte": {
+        "taux_acces_eau_courante_pct": 68,
+        "situation": "DOM le plus en retard — croissance démographique non maîtrisée, réseau insuffisant. Plan eau Mayotte 2024-2030 : 500M€ investissements."
+      }
+    },
+
+    "assainissement": {
+      "guadeloupe": {
+        "taux_raccordement_reseau_collectif_pct": 52,
+        "taux_assainissement_non_collectif_pct": 48,
+        "note_anc": "L'assainissement non-collectif (fosses septiques) est dominant en zone rurale. Fort potentiel de mise aux normes = marché travaux.",
+        "stations_epuration": {
+          "nb_total": 68,
+          "nb_conformes_pct": 61,
+          "principales": [
+            { "nom": "STEP Jarry (Baie-Mahault)", "capacite_eh": 120000, "statut": "Conforme" },
+            { "nom": "STEP Pointe-à-Pitre", "capacite_eh": 80000, "statut": "Travaux extension 2025" },
+            { "nom": "STEP Sainte-Rose", "capacite_eh": 18000, "statut": "Non conforme — en cours" }
+          ]
+        },
+        "investissements_assainissement_2024_2030_eur_millions": 320,
+        "axes_prioritaires": [
+          "Extension réseau collectif zones périurbaines",
+          "Mise aux normes STEP non conformes",
+          "Réhabilitation assainissement non collectif (ANC)"
+        ]
+      }
+    },
+
+    "chlordecone": {
+      "contexte": "La chlordécone (pesticide utilisé sur bananeraies 1972-1993) a contaminé les sols et eaux souterraines de Basse-Terre et Martinique. Impact durable sur eau potable et pêche côtière.",
+      "zones_impactees": ["Basse-Terre (côté Caraïbe)", "Nord Martinique"],
+      "suivi_eau": "Contrôle systématique par ARS Guadeloupe — publication résultats en ligne",
+      "impact_peche": "Interdiction pêche certaines zones côtières — zones actualisées par arrêté préfectoral",
+      "plan_chlordecone_4": {
+        "budget_eur_millions": 92,
+        "periode": "2021-2027",
+        "axes": ["Dépollution sols", "Alternatives agricoles", "Accompagnement victimes", "Recherche médicale"]
+      }
+    },
+
+    "gestion_eaux_pluviales": {
+      "contexte_caribeen": "Forte pluviométrie (1 500-7 000 mm/an selon exposition) mais ruissellement mal capté. Inondations récurrentes en saison des pluies.",
+      "guadeloupe": {
+        "zones_inondables_ha": 12000,
+        "evenements_majeurs_recents": ["Ouragan Maria 2017", "Tempête Tammy 2023"],
+        "programme_papi": {
+          "nom": "Programme d'Actions de Prévention des Inondations",
+          "budget_eur_millions": 45,
+          "periode": "2022-2028"
+        },
+        "solution_emergente": "Noues végétalisées + toitures végétalisées + citernes de récupération (primes ADEME disponibles)"
+      }
+    },
+
+    "marche_travaux_opportunites": {
+      "appels_offres_en_cours_2025_2026": [
+        {
+          "marche": "Renouvellement canalisations AEP Pointe-à-Pitre Nord",
+          "maitre_ouvrage": "SMGEAG",
+          "budget_estime_eur_millions": 18,
+          "statut": "AAPC prévu T3 2025"
+        },
+        {
+          "marche": "Nouvelle STEP Baie-Mahault extension",
+          "maitre_ouvrage": "SMGEAG",
+          "budget_estime_eur_millions": 35,
+          "statut": "Études en cours — appel d'offres T1 2026"
+        },
+        {
+          "marche": "Dessalement eau de mer Saint-Martin",
+          "maitre_ouvrage": "COM Saint-Martin",
+          "budget_estime_eur_millions": 12,
+          "statut": "Appel d'offres ouvert"
+        },
+        {
+          "marche": "Plan eau Mayotte 2024-2030",
+          "maitre_ouvrage": "DEAL Mayotte + État",
+          "budget_estime_eur_millions": 500,
+          "statut": "Marchés en cours de notification — BTP + génie civil + équipements"
+        }
+      ],
+      "secteurs_porteurs": [
+        { "secteur": "Détection fuites + SIG réseau", "potentiel": "Fort — 60% pertes réseau = priorité SMGEAG" },
+        { "secteur": "Dessalement eau de mer (SWRO)", "potentiel": "Fort — Guadeloupe + Mayotte + petites îles" },
+        { "secteur": "Traitement eaux usées compactes (zones rurales)", "potentiel": "Fort — 48% ANC à remettre aux normes" },
+        { "secteur": "Compteurs intelligents + télérelève", "potentiel": "Moyen — SMGEAG en cours déploiement" },
+        { "secteur": "Récupération eaux de pluie (résidentiel + agricole)", "potentiel": "Croissant — sécheresses + primes ADEME" }
+      ]
+    },
+
+    "acteurs_institutionnels": {
+      "smgeag": {
+        "nom_complet": "Syndicat Mixte de Gestion de l'Eau et de l'Assainissement de Guadeloupe",
+        "creation": "2022 (remplace CANGT + SIAEAG)",
+        "role": "Maître d'ouvrage eau et assainissement Guadeloupe — interlocuteur principal pour marchés publics",
+        "web": "smgeag.fr",
+        "tel": "0590 41 00 20"
+      },
+      "deal_guadeloupe": {
+        "role": "Direction Environnement Aménagement Logement — contrôle réglementaire eau, police eau",
+        "web": "deal.guadeloupe.developpement-durable.gouv.fr"
+      },
+      "ars_guadeloupe": {
+        "role": "Agence Régionale de Santé — contrôle qualité eau potable, résultats publics",
+        "web": "ars.sante.fr/guadeloupe"
+      },
+      "oeb_guadeloupe": {
+        "role": "Office de l'Eau Guadeloupe — données hydrométriques, redevances",
+        "web": "eauguadeloupe.fr"
+      },
+      "afd": {
+        "role": "Agence Française de Développement — financement projets eau/assainissement DOM + Caraïbes",
+        "instruments": ["Prêts souverains", "Subventions", "Assistance technique"],
+        "web": "afd.fr"
+      }
+    },
+
+    "financements_disponibles": [
+      { "dispositif": "FEDER 2021-2027 Guadeloupe — Axe eau", "montant_eur_millions": 85, "taux_cofinancement": "50-70%", "gestionnaire": "Région Guadeloupe" },
+      { "dispositif": "Fonds Barnier (prévention inondations)", "taux_cofinancement": "40-80%", "gestionnaire": "État / DGPR" },
+      { "dispositif": "AFD — Facilité eau DOM", "montant_eur_millions": 120, "type": "Prêts taux préférentiel 0.5%", "duree_ans": 25 },
+      { "dispositif": "OFB — Agence de l'Eau Martinique-Guadeloupe", "role": "Redevances reversées en aides travaux ANC + milieux aquatiques" }
+    ],
+
+    "changelog": [
+      { "date": "2026-05-17", "modification": "Création initiale — DEAL + ARPEGE + Cour des Comptes + AFD + terrain Tropical Autonome", "auteur": "Tropical Autonome" }
+    ]
+  }
+}

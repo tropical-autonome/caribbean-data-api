@@ -1,0 +1,102 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-13",
+  "verified_by": "Frederick Martel — Tropical Autonome",
+  "sources": [
+    {
+      "name": "CRE - Commission de Régulation de l'Énergie",
+      "url": "https://www.cre.fr/energie-renouvelable/zones-non-interconnectees",
+      "consulted": "2026-05-13"
+    },
+    {
+      "name": "EDF SEI - Systèmes Energétiques Insulaires",
+      "url": "https://www.edf.fr/groupe-edf/nos-energies/energies-renouvelables/photovoltaique/obligation-achat",
+      "consulted": "2026-05-13"
+    }
+  ],
+  "update_frequency": "quarterly",
+  "next_review": "2026-08-01",
+  "changelog": [
+    {
+      "version": "1.0",
+      "date": "2026-05-13",
+      "note": "Création initiale du dataset"
+    }
+  ],
+  "data": {
+    "description": "Tarifs d'Obligation d'Achat EDF pour installations photovoltaïques en Zone Non Interconnectée (DOM français)",
+    "zones": {
+      "971": {
+        "name": "Guadeloupe",
+        "tarif_actuel_kwh_eur": 0.18,
+        "duree_contrat_ans": 20,
+        "type_contrat": "Obligation d'Achat",
+        "plafond_puissance_kwc": 100,
+        "date_application": "2024-01-01",
+        "confidence": "high",
+        "source_type": "official"
+      },
+      "972": {
+        "name": "Martinique",
+        "tarif_actuel_kwh_eur": 0.18,
+        "duree_contrat_ans": 20,
+        "type_contrat": "Obligation d'Achat",
+        "plafond_puissance_kwc": 100,
+        "date_application": "2024-01-01",
+        "confidence": "high",
+        "source_type": "official"
+      },
+      "974": {
+        "name": "La Réunion",
+        "tarif_actuel_kwh_eur": 0.1654,
+        "duree_contrat_ans": 20,
+        "type_contrat": "Obligation d'Achat",
+        "plafond_puissance_kwc": 100,
+        "date_application": "2024-01-01",
+        "confidence": "medium",
+        "note": "À vérifier — peut différer légèrement selon délibération CRE locale"
+      }
+    },
+    "tranches_puissance": [
+      {
+        "tranche": "≤ 9 kWc",
+        "tarif_base_kwh_eur": 0.18,
+        "prime_autoconsommation": true,
+        "note": "Tarif le plus favorable, installations résidentielles"
+      },
+      {
+        "tranche": "9 à 36 kWc",
+        "tarif_base_kwh_eur": 0.18,
+        "prime_autoconsommation": false,
+        "note": "Installations commerciales et PME"
+      },
+      {
+        "tranche": "36 à 100 kWc",
+        "tarif_base_kwh_eur": 0.1654,
+        "prime_autoconsommation": false,
+        "note": "Installations industrielles et tertiaires"
+      }
+    ],
+    "historique_tarifs": [
+      { "annee": 2020, "tarif_kwh_eur": 0.176, "zone": "971" },
+      { "annee": 2021, "tarif_kwh_eur": 0.178, "zone": "971" },
+      { "annee": 2022, "tarif_kwh_eur": 0.179, "zone": "971" },
+      { "annee": 2023, "tarif_kwh_eur": 0.18, "zone": "971" },
+      { "annee": 2024, "tarif_kwh_eur": 0.18, "zone": "971" },
+      { "annee": 2025, "tarif_kwh_eur": 0.18, "zone": "971" }
+    ],
+    "conditions_eligibilite": [
+      "Installation raccordée au réseau EDF SEI",
+      "Puissance installée entre 3 kWc et 100 kWc",
+      "Dossier de raccordement validé par EDF",
+      "Contrat d'achat signé avant mise en service",
+      "Installation réalisée par un professionnel certifié RGE"
+    ],
+    "avantages_zni_vs_metropole": [
+      "Tarif ZNI supérieur d'environ 40% au tarif métropole",
+      "Durée de contrat identique (20 ans)",
+      "Coût de l'électricité DOM élevé → rentabilité accrue",
+      "Ensoleillement supérieur (1600-2000 kWh/m²/an vs 1000-1500 en métropole)"
+    ]
+  }
+}

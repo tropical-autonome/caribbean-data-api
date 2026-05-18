@@ -1,0 +1,205 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-17",
+  "update_frequency": "semi-annual",
+  "source_type": "market_data + institutional + field_experience",
+  "sources": [
+    { "name": "Comité du Tourisme des Îles de Guadeloupe (CTIG) — Bilan 2024" },
+    { "name": "INSEE Guadeloupe — Fréquentation hôtelière 2024" },
+    { "name": "Atout France — Tourisme durable DOM 2024" },
+    { "name": "Global Sustainable Tourism Council (GSTC) — Critères certification" },
+    { "name": "Clef Verte — Liste établissements labellisés Guadeloupe 2024" },
+    { "name": "Tropical Autonome — terrain hébergements et restaurateurs Guadeloupe 2022-2025", "type": "field_experience" }
+  ],
+  "disclaimer": "Chiffres de fréquentation estimés — méthodes CTIG et INSEE peuvent diverger. Hébergements labellisés : vérifier statut label en cours de validité sur les sites officiels des labels.",
+  "data": {
+    "vue_generale": {
+      "visiteurs_totaux_2024": 870000,
+      "dont_touristes_sejour": 640000,
+      "dont_croisieres_passagers": 230000,
+      "recettes_tourisme_milliards_eur": 0.52,
+      "duree_sejour_moyenne_jours": 11.4,
+      "depense_moyenne_par_touriste_eur": 812,
+      "emplois_directs_tourisme": 28000,
+      "part_pib_guadeloupe_pct": 5.3,
+      "tendance_2023_2024": "+8% visiteurs séjour — fort retour post-Covid + clientèle premium croissante"
+    },
+
+    "marchés_emetteurs": {
+      "france_metropole": {
+        "part_pct": 68,
+        "profil": "Familles + retraités + DOM-TOM. Vol direct depuis Paris (3h40). Séjour long.",
+        "canal_reserve": "Tour-opérateurs (Karavel, TUI, Jet Tours) + direct en ligne"
+      },
+      "amerique_du_nord": {
+        "part_pct": 12,
+        "detail": { "usa": 7, "canada": 5 },
+        "profil": "Couples sans enfants, budget élevé, recherche authenticité et nature",
+        "tendance": "+22% en 2024 — croissance forte depuis ouverture vol Miami-Pointe-à-Pitre"
+      },
+      "europe_hors_france": {
+        "part_pct": 11,
+        "detail": { "belgique": 4, "suisse": 3, "allemagne": 2, "autres": 2 },
+        "profil": "Sensibles au tourisme durable, pouvoir d'achat élevé"
+      },
+      "caraibes_voisins": {
+        "part_pct": 6,
+        "detail": ["Martinique", "Saint-Martin", "Dominique"],
+        "profil": "Courts séjours, affaires, week-ends"
+      },
+      "autres": { "part_pct": 3 }
+    },
+
+    "hebergement": {
+      "capacite_totale_lits": 28500,
+      "par_type": {
+        "hotels_classes": {
+          "nb_etablissements": 48,
+          "nb_chambres": 5200,
+          "taux_occupation_moyen_pct": 62,
+          "tarif_moyen_chambre_eur_nuit": 145,
+          "concentration": "Saint-François, Sainte-Anne, Le Gosier (pôles balnéaires)"
+        },
+        "gites_meublés": {
+          "nb_etablissements": 1850,
+          "nb_lits": 14000,
+          "taux_occupation_moyen_pct": 54,
+          "tarif_moyen_eur_nuit": 95,
+          "plateforme_dominante": "Airbnb (68%) + Booking (22%) + direct (10%)",
+          "note": "Segment en forte croissance. Réglementation encadrée par les mairies depuis 2023."
+        },
+        "residences_tourisme": {
+          "nb_etablissements": 28,
+          "nb_appartements": 4200
+        },
+        "eco_lodges_hebergements_nature": {
+          "nb_etablissements": 42,
+          "nb_lits": 680,
+          "tarif_moyen_eur_nuit": 185,
+          "taux_occupation_moyen_pct": 71,
+          "note": "Segment premium en déficit d'offre — liste d'attente récurrente sur établissements labellisés",
+          "etablissements_references": [
+            { "nom": "Couleur Cannelle", "commune": "Sainte-Rose", "label": "Clef Verte", "chambres": 8 },
+            { "nom": "La Toubana", "commune": "Sainte-Anne", "label": "Hôtel & Spa 4*", "chambres": 32 },
+            { "nom": "Jardin Malanga", "commune": "Vieux-Habitants", "label": "Charme & nature", "chambres": 12 }
+          ]
+        }
+      }
+    },
+
+    "tourisme_durable_labels": {
+      "clef_verte": {
+        "nb_etablissements_guadeloupe": 18,
+        "types": ["Hôtels", "Gîtes", "Campings", "Restaurants"],
+        "criteres": [
+          "Gestion eau (réduction 20% vs moyenne secteur)",
+          "Énergie (ENR, LED, isolation)",
+          "Déchets (tri, compostage, réduction emballages)",
+          "Environnement local (produits locaux, biodiversité)",
+          "Sensibilisation clients"
+        ],
+        "prime_prix_acceptee_pct": 18,
+        "web": "laclefverte.org"
+      },
+      "ecolabel_europeen": {
+        "nb_etablissements_guadeloupe": 3,
+        "note": "Certification la plus exigeante — niveau technique élevé requis",
+        "prime_prix_acceptee_pct": 25
+      },
+      "gites_de_france": {
+        "nb_etablissements_guadeloupe": 380,
+        "note": "Label qualité (non spécifiquement durable mais critères environnementaux depuis 2022)"
+      },
+      "biosphere_tourism": {
+        "statut_guadeloupe": "En cours de démarche (CTIG 2024-2025)",
+        "note": "Label international UNWTO — fort pour marchés européens et nord-américains sensibles durabilité"
+      }
+    },
+
+    "zones_attractivite": {
+      "sud_grande_terre": {
+        "communes": ["Sainte-Anne", "Le Gosier", "Saint-François"],
+        "profil": "Balnéaire, familles, hôtels 4-5*, clubs de plage",
+        "points_forts": ["Plages (Grande Anse, Raisin-Clairs)", "Mangrove", "Îlets Pigeon accessibles"],
+        "saturation": "Haute saison (juillet-août, Noël) — offre insuffisante"
+      },
+      "nord_basse_terre": {
+        "communes": ["Sainte-Rose", "Deshaies", "Pointe-Noire"],
+        "profil": "Nature, randonnée, tourisme vert, familles actives",
+        "points_forts": ["Parc National Guadeloupe", "Plages (Grande Anse Deshaies)", "Rivières"],
+        "potentiel_eco_tourisme": "Fort — sous-exploité par rapport à la demande"
+      },
+      "marie_galante": {
+        "profil": "Tourisme authentique, rhum agricole, plages préservées",
+        "frequentation_2024": 48000,
+        "tendance": "+15% — île en vogue clientèle CSP+",
+        "capacite_hebergement_lits": 1200,
+        "limite": "Ferries + capacité hôtelière = goulot d'étranglement"
+      },
+      "les_saintes": {
+        "profil": "Tourisme de charme, voile, villages pittoresques",
+        "frequentation_2024": 95000,
+        "problematique": "Surfréquentation — mairie limite désormais les croisiéristes"
+      },
+      "la_desirade": {
+        "profil": "Tourisme confidentiel, nature préservée, plongée",
+        "frequentation_2024": 8000,
+        "potentiel": "Fort pour écotourisme premium — capacité très limitée (offre = frein)"
+      }
+    },
+
+    "activites_touristiques": {
+      "plongee_sous_marine": {
+        "nb_clubs_centres": 38,
+        "zone_phare": "Réserve Cousteau (Malendure) — 150 000 plongeurs/an",
+        "prix_bapteme_eur": 55,
+        "prix_exploration_eur": 45,
+        "note": "La Réserve Cousteau = site de plongée le plus fréquenté des Caraïbes françaises"
+      },
+      "randonnee_nature": {
+        "km_sentiers_balisés": 1200,
+        "pic_soufriere": "Randonnée emblématique — 60 000 visiteurs/an",
+        "chutes_carbet": "30 000 visiteurs/an",
+        "prix_guide_eur_journee": 65
+      },
+      "nautisme_voile": {
+        "places_port_plaisance": 2800,
+        "principaux_ports": ["Marina de Bas-du-Fort", "Saint-François", "Deshaies"],
+        "navigation_inter_iles": "Route des îles (Guadeloupe → Dominique → Martinique) — marché en croissance",
+        "location_catamaran_eur_semaine": 3800
+      },
+      "tourisme_gastronomique": {
+        "prix_repas_moyen_restaurant_gastronomique_eur": 65,
+        "specialites_recherchees": ["Langouste grillée", "Colombo", "Blaff de poisson", "Rhum agricole"],
+        "tendance": "Touristes CSP+ prêts à payer premium pour authenticité"
+      }
+    },
+
+    "opportunites_investissement": {
+      "deficit_offre_eco_lodges": {
+        "potentiel": "Fort — 42 établissements pour 640 000 touristes séjour",
+        "ticket_entree_eur": 400000,
+        "retour_estime_ans": 7,
+        "aide_mobilisable": "FEADER + BPI + Exo charges DOM"
+      },
+      "tourisme_medical_bien_etre": {
+        "potentiel": "Croissant — clientèle française recherche séjours wellness en climat tropical",
+        "segment": "Retraites yoga, cures thalasso, séjours post-opération"
+      },
+      "tourisme_digital_nomades": {
+        "tendance": "Forte croissance — Guadeloupe = pas de décalage horaire avec Paris, internet fibre",
+        "besoin": "Co-working + hébergements 1 mois+ à tarif mensuel"
+      }
+    },
+
+    "contacts_institutionnels": [
+      { "organisme": "CTIG — Comité Tourisme Îles Guadeloupe", "role": "Promotion + statistiques", "web": "lesilesdeguadeloupe.com" },
+      { "organisme": "ADEME Guadeloupe", "role": "Financement projets durables hébergements", "web": "ademe.fr" },
+      { "organisme": "Région Guadeloupe — Service Tourisme", "role": "Subventions création hébergement durable" }
+    ],
+
+    "changelog": [
+      { "date": "2026-05-17", "modification": "Création initiale — CTIG + INSEE + Atout France + terrain Tropical Autonome", "auteur": "Tropical Autonome" }
+    ]
+  }
+}

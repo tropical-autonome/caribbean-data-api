@@ -1,0 +1,273 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-14",
+  "update_frequency": "semi-annual",
+  "source_type": "field_experience",
+  "periode_observee": "2020-2026",
+  "sources": [
+    {
+      "name": "Tropical Autonome — expérience terrain Guadeloupe",
+      "type": "field_experience",
+      "periode": "2020-2026",
+      "projets_suivis": "12 projets raccordement EDF SEI Guadeloupe"
+    },
+    {
+      "name": "EDF SEI — Systèmes Énergétiques Insulaires",
+      "url": "https://www.edf.fr/edf-sei",
+      "note": "Source officielle pour documents — délais officiels sous-estimés"
+    },
+    {
+      "name": "CRE — Commission de Régulation de l'Énergie",
+      "url": "https://www.cre.fr"
+    }
+  ],
+  "disclaimer": "Données issues de l'expérience terrain Tropical Autonome sur 12 projets en Guadeloupe (2020-2026). Les délais et procédures peuvent varier selon la commune, la puissance et la charge de travail EDF SEI. Ces informations complètent (sans remplacer) les démarches officielles EDF SEI.",
+  "data": {
+    "contexte": {
+      "operateur": "EDF SEI (Systèmes Énergétiques Insulaires)",
+      "territoire": "Guadeloupe (971) — Zone Non Interconnectée (ZNI)",
+      "specificites_zni": [
+        "Réseau insulaire indépendant du réseau métropolitain",
+        "Capacité d'intégration limitée selon commune et sous-station",
+        "EDF SEI a un droit de refus si saturation réseau locale",
+        "Tarifs OA spécifiques ZNI (~0,18 €/kWh vs ~0,13 en métropole)"
+      ],
+      "differences_metropole": [
+        "Délais 2 à 3 fois plus longs qu'en métropole",
+        "Moins d'interlocuteurs — files d'attente longues",
+        "Contraintes cycloniques supplémentaires sur les matériels",
+        "Saturation réseau plus fréquente (réseau plus petit)",
+        "Pas de guichet en ligne fonctionnel — tout par courrier/email"
+      ]
+    },
+
+    "etapes": [
+      {
+        "numero": 1,
+        "nom": "Étude de faisabilité préalable",
+        "qui": "Installateur RGE + propriétaire",
+        "duree_reelle": "2 à 4 semaines",
+        "duree_officielle": "Non définie",
+        "actions": [
+          "Vérifier la puissance disponible sur le compteur (triphasé requis > 18 kWc)",
+          "Analyser l'orientation et l'ombrage toiture",
+          "Vérifier la capacité de la sous-station locale (appeler EDF SEI)",
+          "Obtenir devis installateur certifié RGE + QualiPV"
+        ],
+        "documents_a_preparer": [
+          "Plan de masse du bâtiment",
+          "Photos toiture (4 orientations + vue aérienne)",
+          "Dernière facture EDF (référence PDL/PRM)"
+        ],
+        "conseil_terrain": "Appeler directement EDF SEI Guadeloupe avant de lancer le projet pour vérifier la capacité réseau de ta commune. Certaines zones (Pointe-à-Pitre centre, certains secteurs Baie-Mahault) sont saturées — tu l'apprends après 6 mois sinon."
+      },
+      {
+        "numero": 2,
+        "nom": "Dépôt de la Demande de Raccordement (DR)",
+        "qui": "Installateur RGE (au nom du client)",
+        "duree_reelle": "1 semaine (constitution dossier)",
+        "duree_officielle": "N/A",
+        "actions": [
+          "Compléter le formulaire de Demande de Raccordement EDF SEI",
+          "Joindre tous les documents obligatoires",
+          "Envoyer par recommandé AR ou email avec accusé à l'agence EDF SEI Jarry"
+        ],
+        "documents_obligatoires": [
+          "Formulaire DR EDF SEI complété et signé",
+          "Attestation de propriété ou bail (copie acte notarié ou titre de propriété)",
+          "Plan de situation cadastral (disponible sur cadastre.gouv.fr)",
+          "Plan de masse coté (échelle 1/500 minimum)",
+          "Schema unifilaire de l'installation (fait par l'installateur)",
+          "Fiche technique onduleur (certifié DOM — liste EDF SEI)",
+          "Fiche technique panneaux solaires (certifié DOM — liste EDF SEI)",
+          "Attestation certification RGE de l'installateur (QualiPV ou equivalent)",
+          "Devis signé ou bon de commande installateur",
+          "Copie pièce d'identité du demandeur"
+        ],
+        "point_attention": "La certification DOM des matériels est OBLIGATOIRE et souvent oubliée. EDF SEI a une liste de matériels homologués pour les ZNI (résistance aux cyclones, chaleur, humidité). Un onduleur non listé = refus automatique.",
+        "conseil_terrain": "Demander à l'installateur de vérifier la liste EDF SEI des matériels homologués AVANT d'acheter les équipements. La liste est mise à jour tous les 6 mois environ."
+      },
+      {
+        "numero": 3,
+        "nom": "Étude technique EDF SEI (PTF)",
+        "qui": "EDF SEI",
+        "duree_reelle": "3 à 6 mois",
+        "duree_officielle": "3 mois (délai réglementaire CRE)",
+        "actions": [
+          "EDF SEI analyse la capacité réseau locale",
+          "Vérifie la conformité des matériels",
+          "Calcule les travaux nécessaires côté réseau",
+          "Émet la Proposition Technique et Financière (PTF)"
+        ],
+        "resultat": "Proposition Technique et Financière (PTF) — document clé qui indique le coût des travaux réseau et les conditions du raccordement",
+        "scenarios_ptf": {
+          "scenario_simple": {
+            "description": "Réseau local OK, pas de travaux nécessaires",
+            "cout_travaux_reseau": "0 à 500€",
+            "frequence": "Environ 40% des projets résidentiels < 36 kWc"
+          },
+          "scenario_moyen": {
+            "description": "Renforcement câblage ou compteur nécessaire",
+            "cout_travaux_reseau": "500 à 3 000€",
+            "frequence": "Environ 45% des projets"
+          },
+          "scenario_complexe": {
+            "description": "Extension réseau ou renforcement sous-station",
+            "cout_travaux_reseau": "3 000 à 30 000€",
+            "frequence": "Environ 15% — surtout puissances > 100 kWc ou zones rurales"
+          }
+        },
+        "blocage_frequent": "Silence d'EDF SEI au-delà de 3 mois. Solution : relance par courrier recommandé AR en citant l'article L342-1 du Code de l'Énergie et le délai réglementaire CRE. Copier la CRE en destinataire secondaire accélère souvent le traitement.",
+        "conseil_terrain": "Ne pas hésiter à relancer tous les 3 semaines. EDF SEI est en sous-effectif — les dossiers sans relance dorment."
+      },
+      {
+        "numero": 4,
+        "nom": "Acceptation de la PTF et paiement",
+        "qui": "Client / propriétaire",
+        "duree_reelle": "1 à 2 semaines",
+        "duree_officielle": "3 mois pour accepter (délai de validité PTF)",
+        "actions": [
+          "Lire attentivement la PTF (vérifier puissance autorisée, conditions)",
+          "Signer et retourner la PTF acceptée",
+          "Payer les frais de raccordement (chèque ou virement EDF SEI)"
+        ],
+        "point_attention": "La PTF a une durée de validité de 3 mois. Passé ce délai, il faut redemander — et reprendre depuis l'étude technique (retard de 3 à 6 mois supplémentaires).",
+        "conseil_terrain": "Accepter et payer rapidement même si tu n'es pas encore prêt à installer. Le délai d'acceptation est indépendant du délai d'installation."
+      },
+      {
+        "numero": 5,
+        "nom": "Installation de l'équipement",
+        "qui": "Installateur RGE",
+        "duree_reelle": "1 à 5 jours selon puissance",
+        "duree_officielle": "N/A",
+        "actions": [
+          "Installation panneaux solaires et structure",
+          "Installation onduleur et câblage DC/AC",
+          "Installation coffret de protection et compteur de production",
+          "Tests électriques et mise sous tension partielle"
+        ],
+        "contraintes_specifiques_dom": [
+          "Structure métallique anticorrosion obligatoire (air marin)",
+          "Fixation renforcée anticyclone (vent > 200 km/h à prévoir)",
+          "Câblage protection UV renforcée",
+          "Onduleur avec ventilation adaptée chaleur tropicale"
+        ]
+      },
+      {
+        "numero": 6,
+        "nom": "Consuel et conformité électrique",
+        "qui": "Consuel (organisme agréé)",
+        "duree_reelle": "2 à 6 semaines",
+        "duree_officielle": "Non définie",
+        "actions": [
+          "Demande d'attestation Consuel par l'installateur",
+          "Visite de contrôle de l'installation",
+          "Obtention de l'attestation de conformité Consuel"
+        ],
+        "cout": "150 à 300€",
+        "blocage_frequent": "Files d'attente Consuel Guadeloupe longues en haute saison (jan-juin). Planifier la demande Consuel dès la commande des équipements.",
+        "conseil_terrain": "Certains installateurs ont des relations privilégiées avec les contrôleurs Consuel — vérifier lors du choix de l'installateur."
+      },
+      {
+        "numero": 7,
+        "nom": "Mise en service par EDF SEI",
+        "qui": "EDF SEI",
+        "duree_reelle": "4 à 12 semaines après Consuel",
+        "duree_officielle": "15 jours ouvrables",
+        "actions": [
+          "Envoi attestation Consuel à EDF SEI",
+          "Demande de mise en service et de pose du compteur de production",
+          "Intervention technicien EDF SEI sur site",
+          "Pose du compteur bidirectionnel (production + consommation)",
+          "Activation du contrat Obligation d'Achat"
+        ],
+        "blocage_frequent": "C'est souvent l'étape la plus longue en pratique. EDF SEI manque de techniciens disponibles. La mise en service effective peut prendre 2 à 3 mois après Consuel.",
+        "conseil_terrain": "Relancer EDF SEI toutes les 2 semaines après envoi du Consuel. Avoir le numéro direct du chargé d'affaires (obtenu lors du suivi PTF) est un avantage décisif ici."
+      },
+      {
+        "numero": 8,
+        "nom": "Signature du contrat OA et premier paiement",
+        "qui": "Client + EDF OA",
+        "duree_reelle": "2 à 4 semaines après mise en service",
+        "duree_officielle": "Non définie",
+        "actions": [
+          "Réception du contrat Obligation d'Achat (durée 20 ans)",
+          "Vérification du tarif (doit correspondre au tarif en vigueur à la date de la PTF)",
+          "Signature du contrat",
+          "Premier relevé de compteur (mensuel ou trimestriel)",
+          "Premier virement EDF OA (délai 1 à 2 mois)"
+        ],
+        "point_attention": "Le tarif OA est figé à la date d'accusé de réception de la PTF — pas à la date d'installation. Si le tarif a baissé entre les deux, c'est le tarif PTF qui s'applique. Garder précieusement le courrier d'accusé de réception PTF.",
+        "conseil_terrain": "Vérifier que le tarif sur le contrat correspond bien au tarif en vigueur lors de la PTF. Des erreurs arrivent."
+      }
+    ],
+
+    "duree_totale": {
+      "optimiste_mois": 6,
+      "realiste_mois": 10,
+      "pessimiste_mois": 18,
+      "note": "La durée dépend fortement de la commune, de la puissance et de la charge EDF SEI au moment du dossier. Les projets > 100 kWc prennent systématiquement plus de 12 mois."
+    },
+
+    "couts_raccordement": {
+      "frais_ptf_travaux_reseau_eur": "0 à 30 000",
+      "consuel_eur": "150 à 300",
+      "compteur_bidirectionnel": "Fourni par EDF SEI — inclus dans frais raccordement",
+      "note": "Les frais de raccordement réseau sont à la charge du demandeur si l'extension réseau est nécessaire"
+    },
+
+    "erreurs_courantes": [
+      {
+        "erreur": "Matériels non homologués DOM",
+        "consequence": "Refus PTF — recommencer l'étude",
+        "solution": "Vérifier la liste EDF SEI AVANT achat"
+      },
+      {
+        "erreur": "Saturation réseau non vérifiée en amont",
+        "consequence": "Refus raccordement après 6 mois d'attente",
+        "solution": "Appel EDF SEI en phase 1 pour vérifier capacité"
+      },
+      {
+        "erreur": "PTF acceptée trop tard (> 3 mois)",
+        "consequence": "PTF expirée — recommencer l'étude technique",
+        "solution": "Accepter et payer dans les 30 jours"
+      },
+      {
+        "erreur": "Dossier incomplet au dépôt",
+        "consequence": "Délai supplémentaire 4 à 8 semaines",
+        "solution": "Checklist stricte avant envoi — ne rien oublier"
+      },
+      {
+        "erreur": "Pas de relance EDF SEI",
+        "consequence": "Dossier qui dort — délais multipliés par 2",
+        "solution": "Agenda de relances toutes les 3 semaines dès dépôt DR"
+      }
+    ],
+
+    "contacts_utiles": {
+      "edf_sei_guadeloupe": {
+        "nom": "EDF SEI Guadeloupe — Agence Jarry",
+        "adresse": "ZI Jarry, Baie-Mahault (97122)",
+        "note": "Contacter par email pour avoir une trace écrite"
+      },
+      "cre": {
+        "nom": "CRE — Commission de Régulation de l'Énergie",
+        "url": "https://www.cre.fr",
+        "usage": "Saisir si EDF SEI dépasse les délais réglementaires (> 3 mois sans PTF)"
+      },
+      "qualipv": {
+        "nom": "QualiPV — Annuaire installateurs certifiés DOM",
+        "url": "https://www.qualit-enr.org",
+        "filtre": "Sélectionner 'Guadeloupe' dans le moteur de recherche"
+      }
+    },
+
+    "changelog": [
+      {
+        "date": "2026-05-14",
+        "modification": "Création initiale — expérience terrain 12 projets Guadeloupe 2020-2026",
+        "auteur": "Tropical Autonome"
+      }
+    ]
+  }
+}

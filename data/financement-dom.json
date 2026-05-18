@@ -1,0 +1,217 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-14",
+  "update_frequency": "semi-annual",
+  "source_type": "official + field_experience",
+  "periode_observee": "2023-2026",
+  "sources": [
+    {
+      "name": "Région Guadeloupe — Direction de l'Économie",
+      "url": "https://www.regionguadeloupe.fr"
+    },
+    {
+      "name": "BPI France — Direction Régionale Antilles-Guyane",
+      "url": "https://www.bpifrance.fr"
+    },
+    {
+      "name": "ADEME Guadeloupe",
+      "url": "https://www.ademe.fr/guadeloupe"
+    },
+    {
+      "name": "Préfecture de Guadeloupe — FEDER 2021-2027",
+      "url": "https://www.guadeloupe.pref.gouv.fr"
+    },
+    {
+      "name": "Tropical Autonome — expérience terrain Guadeloupe 2020-2026",
+      "type": "field_experience"
+    }
+  ],
+  "disclaimer": "Montants et conditions indicatifs. Les dispositifs évoluent fréquemment. Vérifier l'ouverture des guichets avant dépôt de dossier. Données terrain issues de l'expérience Tropical Autonome en Guadeloupe.",
+  "data": {
+    "cheque_tic_region_guadeloupe": {
+      "nom": "Chèque Transformation Numérique et Innovation (TIC)",
+      "gestionnaire": "Région Guadeloupe",
+      "description": "Aide aux PME guadeloupéennes pour financer des prestations de conseil en transformation numérique, innovation ou transition écologique",
+      "montant_max": 5000,
+      "taux_aide": "50% des dépenses éligibles HT",
+      "plafond_depenses_eligibles": 10000,
+      "eligibilite": {
+        "entreprises": "TPE/PME immatriculées en Guadeloupe (971)",
+        "secteurs": "Tous secteurs sauf agriculture (couverte par FEADER)",
+        "anciennete_min": "1 an d'existence",
+        "effectif_max": 250
+      },
+      "depenses_eligibles": [
+        "Audit numérique ou énergétique",
+        "Conseil en stratégie d'innovation",
+        "Développement logiciel sur mesure",
+        "Formation certifiante dirigeant"
+      ],
+      "procedure": [
+        "Dépôt dossier en ligne sur portail Région Guadeloupe",
+        "Instruction : 4 à 8 semaines",
+        "Réalisation de la prestation après accord",
+        "Remboursement sur factures acquittées"
+      ],
+      "delai_remboursement_observe": "2 à 4 mois après dépôt des justificatifs",
+      "status_2026": "Ouvert — vérifier calendrier sur portail Région",
+      "conseil_terrain": "Déposer en début d'année civile, les enveloppes s'épuisent souvent avant juillet"
+    },
+
+    "bpi_france_dom": {
+      "nom": "BPI France — Offre spécifique DOM-TOM",
+      "gestionnaire": "BPI France Antilles-Guyane (Martinique)",
+      "description": "Financements adaptés aux entreprises des territoires ultramarins",
+      "produits": {
+        "pret_croissance_dom": {
+          "nom": "Prêt Croissance DOM",
+          "montant": "50 000€ à 5 000 000€",
+          "duree": "7 à 12 ans",
+          "franchise": "2 ans de franchise capital possible",
+          "taux": "Taux fixe — conditions marché + bonification possible",
+          "garantie": "Sans garantie personnelle du dirigeant jusqu'à 200 000€",
+          "usage": "Investissements matériels et immatériels, BFR structurel"
+        },
+        "garantie_bpi": {
+          "nom": "Garantie BPI France",
+          "couverture": "Jusqu'à 70% du prêt bancaire",
+          "usage": "Facilite l'accès aux crédits bancaires classiques",
+          "cout": "Commission de garantie 0,6% à 1,2% par an du capital garanti"
+        },
+        "pret_innovation": {
+          "nom": "Prêt Innovation",
+          "montant": "50 000€ à 3 000 000€",
+          "conditions": "Entreprise avec projet R&D ou innovation produit/procédé",
+          "avantage": "Prêt sans dilution, sans garantie réelle"
+        }
+      },
+      "eligibilite_specifique_dom": [
+        "Entreprise immatriculée dans un DOM",
+        "Moins de 5 000 salariés",
+        "Projet créateur d'emplois local ou d'exportation"
+      ],
+      "contact": "BPI France Antilles-Guyane — Fort-de-France, Martinique",
+      "conseil_terrain": "Passer par un conseiller BPI en amont, les dossiers sans accompagnement prennent 2x plus de temps"
+    },
+
+    "ademe_guadeloupe": {
+      "nom": "ADEME — Agence de la Transition Écologique Guadeloupe",
+      "description": "Subventions et accompagnement pour les projets de transition énergétique et écologique",
+      "dispositifs": {
+        "tremplin_tpe_pme": {
+          "nom": "Tremplin TPE/PME",
+          "aide": "Jusqu'à 100 000€",
+          "taux": "30% à 50% des dépenses selon taille entreprise",
+          "eligibles": [
+            "Audit énergétique",
+            "Rénovation thermique bâtiments",
+            "Installation EnR autoconsommation",
+            "Véhicules électriques fleet"
+          ]
+        },
+        "fonds_chaleur": {
+          "nom": "Fonds Chaleur",
+          "description": "Aide à la production de chaleur renouvelable (solaire thermique, biomasse, géothermie)",
+          "montant": "Variable selon puissance installée",
+          "applicable_guadeloupe": true
+        },
+        "eco_conception": {
+          "nom": "Aide Éco-conception",
+          "aide_max": 200000,
+          "taux": "50% pour les PME",
+          "pour": "Intégration critères environnementaux dans conception produits"
+        }
+      },
+      "contact_local": "ADEME Guadeloupe — Jarry, Baie-Mahault",
+      "conseil_terrain": "Les appels à projets ADEME sont limités dans le temps — s'inscrire aux alertes email sur ademe.fr"
+    },
+
+    "feder_2021_2027_guadeloupe": {
+      "nom": "FEDER — Fonds Européen de Développement Régional",
+      "programme": "Programme Opérationnel FEDER-FSE+ Guadeloupe 2021-2027",
+      "enveloppe_totale": "360 millions € pour la Guadeloupe",
+      "axes_prioritaires": {
+        "axe1_recherche_innovation": {
+          "nom": "Recherche, développement technologique et innovation",
+          "budget_indicatif": "45M€",
+          "taux_cofinancement_max": "85%",
+          "eligibles": [
+            "Projets R&D entreprises",
+            "Plateformes technologiques",
+            "Transfert de technologie université-entreprise"
+          ]
+        },
+        "axe2_numerique": {
+          "nom": "Technologies de l'information et de la communication",
+          "budget_indicatif": "30M€",
+          "taux_cofinancement_max": "80%"
+        },
+        "axe3_pme": {
+          "nom": "Compétitivité des PME",
+          "budget_indicatif": "60M€",
+          "taux_cofinancement_max": "85%",
+          "eligibles": [
+            "Investissements productifs PME",
+            "Internationalisation",
+            "Accès aux marchés export"
+          ]
+        },
+        "axe4_energie": {
+          "nom": "Économie sobre en carbone",
+          "budget_indicatif": "80M€",
+          "taux_cofinancement_max": "85%",
+          "eligibles": [
+            "Énergie renouvelable",
+            "Efficacité énergétique bâtiments",
+            "Mobilité propre"
+          ]
+        }
+      },
+      "procedure": [
+        "Appels à projets publiés par la Région Guadeloupe (autorité de gestion)",
+        "Dépôt sur plateforme Ma Démarche FSE",
+        "Instruction 3 à 6 mois",
+        "Conventionnement puis réalisation",
+        "Remboursement sur justificatifs (paiements réels)"
+      ],
+      "points_attention": [
+        "Avance de trésorerie nécessaire (remboursement a posteriori)",
+        "Contrôles et audits fréquents",
+        "Règles de marchés publics si collectivité impliquée",
+        "Double financement interdit avec 244W sur même assiette"
+      ],
+      "conseil_terrain": "Se faire accompagner par un cabinet spécialisé FEDER — les dossiers mal montés sont systématiquement rejetés ou créent des reversements"
+    },
+
+    "cumul_aides": {
+      "principe": "Les aides publiques se cumulent mais dans la limite du coût total de l'investissement et des règles de minimis",
+      "regle_minimis": {
+        "plafond": "200 000€ sur 3 exercices fiscaux glissants",
+        "base": "Règlement UE n°1407/2013",
+        "attention": "Toutes aides publiques confondues (État + Région + ADEME + BPI)"
+      },
+      "exemple_cumul_optimise": {
+        "investissement": 500000,
+        "feder_axe4_80pct": 400000,
+        "ademe_tremplin_20pct_reste": 20000,
+        "bpi_pret_taux_bonifie": "Sur le solde non subventionné",
+        "note": "Le 244W s'applique sur l'assiette NETTE des subventions reçues"
+      },
+      "ordre_montage_recommande": [
+        "1. Identifier subventions applicables (FEDER, ADEME, Région)",
+        "2. Calculer assiette nette 244W (investissement - subventions)",
+        "3. Calculer crédit d'impôt sur assiette nette",
+        "4. Négocier rétrocession avec investisseur métropolitain",
+        "5. Compléter avec prêt BPI sur partie non financée"
+      ]
+    },
+
+    "changelog": [
+      {
+        "date": "2026-05-14",
+        "modification": "Création initiale — données officielles + terrain Guadeloupe 2020-2026",
+        "auteur": "Tropical Autonome"
+      }
+    ]
+  }
+}

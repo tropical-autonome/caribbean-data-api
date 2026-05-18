@@ -1,0 +1,193 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-14",
+  "update_frequency": "static",
+  "source_type": "scientific_study",
+  "sources": [
+    {
+      "name": "MNHN — Muséum National d'Histoire Naturelle",
+      "etude": "Surveillance eDNA côte ouest Guadeloupe 2021-2022",
+      "responsable": "UMR BOREA (Biologie des ORganismes et Ecosystèmes Aquatiques)"
+    },
+    {
+      "name": "OBIS — Ocean Biodiversity Information System",
+      "dataset_url": "https://obis.org/dataset/2b47cfee-0233-4bd8-8f12-58a2fc3c5556",
+      "doi": "En cours de publication"
+    },
+    {
+      "name": "GBIF — Global Biodiversity Information Facility",
+      "url": "https://www.gbif.org"
+    }
+  ],
+  "disclaimer": "Données issues d'une étude scientifique spécifique (MNHN 2021-2022). L'eDNA est une technologie émergente — les résultats doivent être interprétés avec le protocole exact utilisé. Dataset public disponible sur OBIS.",
+  "data": {
+    "etude": {
+      "titre": "Surveillance de la biodiversité marine par ADN environnemental — Côte ouest Guadeloupe",
+      "organisme": "MNHN — UMR BOREA",
+      "periode": "2021-2022",
+      "zone_etude": "Côte ouest Basse-Terre, Guadeloupe (971)",
+      "methode": "eDNA (ADN environnemental) par métabarcoding",
+      "statut_dataset": "Public — OBIS dataset 2b47cfee-0233-4bd8-8f12-58a2fc3c5556"
+    },
+
+    "edna_methodologie": {
+      "definition": "L'ADN environnemental (eDNA) est l'ADN laissé par les organismes dans leur milieu (eau, sol, air) sous forme de cellules, mucus, excréments, peau. Il permet de détecter la présence d'espèces sans les capturer.",
+      "protocole_terrain": {
+        "prelevement": "Filtration de l'eau de mer (filtres 0,2 à 0,8 µm)",
+        "volume_filtre_L": "2 à 5 litres par échantillon",
+        "conservation": "Congélation -20°C ou tampon de lyse immédiat",
+        "frequence": "Mensuelle ou trimestrielle selon objectif"
+      },
+      "protocole_labo": {
+        "extraction": "Extraction ADN sur filtre (kits spécialisés)",
+        "amplification": "PCR avec amorces taxonomiques spécifiques",
+        "sequencage": "NGS (Next Generation Sequencing) — Illumina MiSeq",
+        "bioinformatique": "Attribution taxonomique via bases BOLD, GenBank, MIDORI"
+      },
+      "avantages": [
+        "Non invasif — aucune capture d'animaux",
+        "Détecte espèces rares et cryptiques",
+        "Couvre simultanément des centaines d'espèces",
+        "Standardisable et reproductible"
+      ],
+      "limites": [
+        "Détection de présence, pas d'abondance précise",
+        "ADN dégradé rapidement (24-48h en eau chaude tropicale)",
+        "Faux positifs possibles (contamination)",
+        "Bases de référence incomplètes pour certains groupes"
+      ],
+      "cout_analyse_indicatif": {
+        "prelevement_terrain": "200 à 500€ par station",
+        "analyse_labo_sequencage": "300 à 800€ par échantillon",
+        "bioinformatique_interpretation": "500 à 2000€ par étude"
+      }
+    },
+
+    "resultats_guadeloupe_2021_2022": {
+      "especes_poissons_detectees": 300,
+      "especes_cetaces_detectees": 21,
+      "stations_echantillonnage": 18,
+      "periodes_echantillonnage": ["Mars 2021", "Juillet 2021", "Novembre 2021", "Mars 2022"],
+
+      "especes_poissons_notables": [
+        {
+          "nom_commun": "Mérou géant",
+          "nom_scientifique": "Epinephelus itajara",
+          "statut_uicn": "Vulnérable",
+          "detection": "Confirmée plusieurs stations"
+        },
+        {
+          "nom_commun": "Barracuda",
+          "nom_scientifique": "Sphyraena barracuda",
+          "statut_uicn": "Préoccupation mineure",
+          "detection": "Fréquente"
+        },
+        {
+          "nom_commun": "Carangue",
+          "nom_scientifique": "Caranx hippos",
+          "statut_uicn": "Préoccupation mineure",
+          "detection": "Abondante"
+        },
+        {
+          "nom_commun": "Vivaneau",
+          "nom_scientifique": "Lutjanus analis",
+          "statut_uicn": "Vulnérable",
+          "detection": "Confirmée"
+        },
+        {
+          "nom_commun": "Requin citron",
+          "nom_scientifique": "Negaprion brevirostris",
+          "statut_uicn": "Quasi menacé",
+          "detection": "Détecté — présence confirmée"
+        }
+      ],
+
+      "cetaces_detectes": [
+        {
+          "nom_commun": "Baleine à bosse",
+          "nom_scientifique": "Megaptera novaeangliae",
+          "statut_uicn": "Préoccupation mineure",
+          "saisonnalite": "Janvier à mars (migration reproduction)",
+          "detection_edna": "Forte signal — migration confirmée"
+        },
+        {
+          "nom_commun": "Grand dauphin",
+          "nom_scientifique": "Tursiops truncatus",
+          "statut_uicn": "Préoccupation mineure",
+          "saisonnalite": "Présent toute l'année",
+          "detection_edna": "Signal permanent toutes stations"
+        },
+        {
+          "nom_commun": "Dauphin tacheté pantropical",
+          "nom_scientifique": "Stenella attenuata",
+          "statut_uicn": "Préoccupation mineure",
+          "detection_edna": "Confirmé — stations côtières"
+        },
+        {
+          "nom_commun": "Cachalot",
+          "nom_scientifique": "Physeter macrocephalus",
+          "statut_uicn": "Vulnérable",
+          "detection_edna": "Détecté — eaux profondes côte ouest"
+        },
+        {
+          "nom_commun": "Baleine pilote",
+          "nom_scientifique": "Globicephala macrorhynchus",
+          "statut_uicn": "Préoccupation mineure",
+          "detection_edna": "Confirmé"
+        },
+        {
+          "nom_commun": "Orque",
+          "nom_scientifique": "Orcinus orca",
+          "statut_uicn": "Données insuffisantes",
+          "detection_edna": "Signal détecté — occurrence rare"
+        }
+      ],
+
+      "variation_temporelle": {
+        "observation": "Richesse spécifique maximale en mars (saison sèche)",
+        "explication": "Eaux plus claires, meilleure conservation eDNA, présence baleines à bosse",
+        "impact_surveillance": "Recommander échantillonnage mars-avril pour maximiser détections"
+      }
+    },
+
+    "applications_valorisation": {
+      "monitoring_biodiversite": {
+        "usage": "Suivi longitudinal de la biodiversité marine pour évaluation d'impact de projets côtiers",
+        "clients_potentiels": ["Aménageurs portuaires", "Opérateurs touristiques", "Collectivités"],
+        "frequence_recommandee": "Trimestrielle",
+        "cout_annuel_indicatif": "15 000 à 40 000€ selon nombre de stations"
+      },
+      "credits_biodiversite": {
+        "usage": "L'eDNA fournit la baseline scientifique pour certifier des crédits biodiversité",
+        "lien": "Voir endpoint /credits-biodiversite pour les mécanismes de marché",
+        "partenaire_recommande": "NatureMetrics (eDNA + bioacoustique, certifié TNFD)"
+      },
+      "recherche_especes_envahissantes": {
+        "usage": "Détection précoce d'espèces invasives (Lion fish, Sargasses associées...)",
+        "avantage": "Détection avant que l'espèce soit visible visuellement"
+      }
+    },
+
+    "partenaires_techniques": {
+      "naturemetrics": {
+        "nom": "NatureMetrics",
+        "specialite": "eDNA + bioacoustique — certification TNFD",
+        "url": "https://www.naturemetrics.com",
+        "pertinence": "Partenaire idéal pour créer des crédits biodiversité certifiés depuis données eDNA Guadeloupe"
+      },
+      "mnhn_borea": {
+        "nom": "MNHN UMR BOREA",
+        "specialite": "Recherche eDNA marine Caraïbes",
+        "contact_possible": "Via portail MNHN ou partenariat recherche"
+      }
+    },
+
+    "changelog": [
+      {
+        "date": "2026-05-14",
+        "modification": "Création initiale — étude MNHN 2021-2022 + méthodologie eDNA",
+        "auteur": "Tropical Autonome"
+      }
+    ]
+  }
+}

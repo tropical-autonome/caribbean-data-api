@@ -1,0 +1,151 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-14",
+  "update_frequency": "annual",
+  "sources": [
+    {
+      "name": "BOFiP — Bulletin Officiel des Finances Publiques",
+      "reference": "BOI-BIC-RICI-20-10-10-20",
+      "url": "https://bofip.impots.gouv.fr"
+    },
+    {
+      "name": "CGI — Code Général des Impôts",
+      "reference": "Article 244 quater W"
+    },
+    {
+      "name": "DGFiP — Direction Générale des Finances Publiques",
+      "reference": "Formulaire 2069-RCI"
+    }
+  ],
+  "disclaimer": "Données à titre informatif. Consulter un expert-comptable ou avocat fiscaliste avant tout investissement. Les taux et conditions peuvent évoluer selon les lois de finances.",
+  "data": {
+    "nom": "Crédit d'impôt pour investissement productif en outre-mer",
+    "base_legale": "Article 244 quater W du CGI",
+    "description": "Mécanisme fiscal permettant aux entreprises métropolitaines d'investir dans les DOM en bénéficiant d'un crédit d'impôt, avec obligation de rétrocession partielle à l'entreprise locale.",
+
+    "taux": {
+      "taux_base": 0.3825,
+      "taux_base_pct": "38,25%",
+      "taux_majore_pme": 0.45,
+      "taux_majore_pme_pct": "45%",
+      "note": "Taux majoré applicable aux PME (moins de 250 salariés, CA < 50M€ ou bilan < 43M€)"
+    },
+
+    "eligibilite": {
+      "entreprises_eligibles": [
+        "Entreprises soumises à l'impôt sur les sociétés (IS)",
+        "Entreprises soumises à l'impôt sur le revenu (IR) dans la catégorie BIC ou BA",
+        "Entreprises réalisant des investissements productifs neufs dans les DOM"
+      ],
+      "territoires": ["Guadeloupe (971)", "Martinique (972)", "Guyane (973)", "La Réunion (974)", "Mayotte (976)"],
+      "secteurs_eligibles": [
+        "Énergie renouvelable (solaire, éolien, géothermie)",
+        "Agro-transformation",
+        "Tourisme",
+        "BTP et construction",
+        "Industrie manufacturière",
+        "Services aux entreprises"
+      ],
+      "secteurs_exclus": [
+        "Commerce (sauf exceptions)",
+        "Banque et assurance",
+        "Activités immobilières de simple gestion"
+      ],
+      "montant_minimum_investissement": 300000,
+      "montant_minimum_note": "En dessous de 300 000€, agrément fiscal non requis"
+    },
+
+    "base_calcul": {
+      "assiette": "Prix de revient de l'investissement HT",
+      "deductions": [
+        "Subventions publiques reçues (FEDER, ADEME, Région…)",
+        "Aides à finalité régionale"
+      ],
+      "exemple": {
+        "investissement_ht": 500000,
+        "subvention_feder": 100000,
+        "assiette_nette": 400000,
+        "credit_impot_38_25_pct": 153000,
+        "note": "Crédit d'impôt = 400 000 × 38,25% = 153 000€"
+      }
+    },
+
+    "retrocession": {
+      "principe": "L'entreprise métropolitaine doit rétrocéder une partie du crédit d'impôt à l'entreprise locale bénéficiaire de l'investissement",
+      "taux_minimum_retrocession": 0.5263,
+      "taux_minimum_retrocession_pct": "52,63%",
+      "taux_usuel_marche": "60% à 75%",
+      "calcul": "La rétrocession s'exprime en pourcentage de l'avantage fiscal net (crédit d'impôt)",
+      "exemple": {
+        "credit_impot": 153000,
+        "retrocession_minimum_52_63_pct": 80424,
+        "retrocession_usuelle_65_pct": 99450,
+        "note": "L'entreprise locale guadeloupéenne reçoit entre 80 424€ et 99 450€ selon négociation"
+      },
+      "formalisation": "Contrat de location ou de crédit-bail entre l'investisseur métropolitain et l'entreprise locale"
+    },
+
+    "agrement_fiscal": {
+      "requis_si": "Investissement > 1 000 000€ (ou > 250 000€ dans certains secteurs)",
+      "autorite": "Ministère chargé du budget — Direction des Affaires Juridiques",
+      "delai_instruction": "3 à 6 mois",
+      "procedure": "Dépôt dossier complet avec business plan, étude de marché, financement"
+    },
+
+    "procedure_declaration": {
+      "formulaire": "2069-RCI (Réductions et crédits d'impôt)",
+      "depot": "Annexé à la déclaration de résultats IS (formulaire 2065)",
+      "delai": "Même délai que la déclaration fiscale annuelle (3-4 mois après clôture exercice)",
+      "imputation": "Le crédit s'impute sur l'IS dû. Si excédent : remboursable immédiatement pour les PME, à l'issue de 3 ans pour les grandes entreprises"
+    },
+
+    "cas_pratiques": {
+      "projet_solaire_cession": {
+        "description": "Cession d'un projet solaire en Guadeloupe avec montage 244W",
+        "scenario": "Promoteur métropolitain investit 800 000€ HT dans une centrale solaire 100 kWc",
+        "etapes": [
+          "1. Promoteur crée SCI ou SARL locale avec partenaire guadeloupéen",
+          "2. Investissement 800 000€ → crédit d'impôt 38,25% = 306 000€",
+          "3. Rétrocession 65% au partenaire local = 198 900€",
+          "4. Coût net pour le promoteur = 800 000 - 306 000 + 198 900 = 692 900€... non",
+          "4. Gain net promoteur = 306 000 × (1 - 65%) = 107 100€ de crédit conservé",
+          "5. Partenaire local reçoit 198 900€ + bénéficie de la centrale pendant 20 ans"
+        ],
+        "taux_rentabilite_investisseur": "13,4% de l'investissement en crédit d'impôt net"
+      },
+      "agro_transformation_caye": {
+        "description": "Unité de transformation vanille et vétiver — Guadeloupe",
+        "investissement_ht": 350000,
+        "credit_impot": 133875,
+        "retrocession_65_pct": 87019,
+        "gain_net_investisseur": 46856
+      }
+    },
+
+    "cumul_aides": {
+      "possible": true,
+      "regle_minimis": "200 000€ maximum sur 3 exercices fiscaux glissants (règlement UE de minimis)",
+      "cumulable_avec": [
+        "Subventions FEDER (déduites de l'assiette 244W)",
+        "Chèque TIC Région Guadeloupe",
+        "Prêts BPI France DOM",
+        "Subventions ADEME"
+      ],
+      "non_cumulable": "Le même investissement ne peut pas bénéficier à la fois du 244W et du 199 undecies B (ancien régime Girardin)"
+    },
+
+    "delais_remboursement": {
+      "pme": "Remboursement immédiat de l'excédent de crédit d'impôt",
+      "grandes_entreprises": "Report sur 3 ans puis remboursement",
+      "delai_effectif_tresorerie": "6 à 18 mois selon complexité du dossier et taille entreprise"
+    },
+
+    "changelog": [
+      {
+        "date": "2026-05-14",
+        "modification": "Création initiale du fichier — données BOFiP et CGI art. 244 quater W",
+        "auteur": "Tropical Autonome"
+      }
+    ]
+  }
+}

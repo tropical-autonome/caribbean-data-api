@@ -1,0 +1,160 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-14",
+  "update_frequency": "quarterly",
+  "source_type": "market_data + field_experience",
+  "sources": [
+    { "name": "ITC Trade Map 2024-2025" },
+    { "name": "CARICOM — Caribbean Community trade statistics" },
+    { "name": "Dubai Customs — import statistics 2024" },
+    { "name": "Tropical Autonome — terrain Guadeloupe + réseau acheteurs", "type": "field_experience" }
+  ],
+  "disclaimer": "Vue d'ensemble marché — données indicatives. Les prix varient selon qualité, certification, volume et acheteur. Vérifier les cours actuels avant négociation.",
+  "data": {
+    "vue_marche_global": {
+      "taille_agro_transformation_caraibes_USD_milliards": 4.2,
+      "croissance_annuelle_pct": 12,
+      "tendance_cle": "Explosion de la demande premium naturel + traçable. Les Caraïbes = terroir perçu comme authentique et exotique par les acheteurs Dubai, Europe, US.",
+      "opportunite_majeure": "80% des produits caribéens premium sont encore vendus en vrac non transformé — la valeur ajoutée reste à capturer"
+    },
+
+    "produits": {
+      "cacao": {
+        "production_guadeloupe_tonnes": 120,
+        "qualite": "Cacao fin d'arôme — catégorie la plus valorisée (10% production mondiale)",
+        "prix_comparatifs_usd_kg": {
+          "cacao_vrac_conventionnel": 3.5,
+          "cacao_fin_arome_fermente": 8,
+          "feves_sechees_bio_certifie": 12,
+          "pate_cacao_artisanale": 18,
+          "chocolat_tablette_single_origin": 45
+        },
+        "marches_cibles": ["Chocolatiers artisans Europe", "Bean-to-bar US", "Pâtisseries Dubai"],
+        "certifications_valeur": ["Cacao Fino de Aroma (ICCO)", "Agriculture Biologique", "Fairtrade"],
+        "tendance_2025": "Bean-to-bar en explosion — les chocolatiers cherchent des origines traçables avec histoires. Guadeloupe = terroir volcanique + île française = storytelling fort.",
+        "potentiel_transformation": {
+          "pate_cacao": { "prix_kg_usd": 18, "marge_vs_feves": "+125%" },
+          "beurre_cacao": { "prix_kg_usd": 22, "marche": "Cosmétique naturelle + chocolaterie" },
+          "poudre_cacao": { "prix_kg_usd": 15 }
+        }
+      },
+
+      "miel": {
+        "production_guadeloupe_tonnes_an": 85,
+        "varietes": [
+          { "nom": "Miel de fleurs tropicales", "prix_kg_eur": 18, "note": "Multi-floral — production principale" },
+          { "nom": "Miel de balisier", "prix_kg_eur": 35, "note": "Mono-floral rare — balisier endémique Antilles" },
+          { "nom": "Miel de canne à sucre", "prix_kg_eur": 28, "note": "Profil caramel unique — très recherché" },
+          { "nom": "Miel de mangrove", "prix_kg_eur": 45, "note": "Ultra-rare — quelques dizaines de kg/an" }
+        ],
+        "marches_export": {
+          "france_metropole": { "prix_acceptable_eur_kg": 25, "volume_potentiel_tonnes": 20 },
+          "dubai": { "prix_acceptable_usd_kg": 40, "note": "Fort intérêt miels rares et exotiques" },
+          "allemagne": { "prix_acceptable_eur_kg": 22, "note": "Marché bio très développé" }
+        },
+        "certifications": ["Agriculture Biologique (AB)", "IGP Miel de Guadeloupe (en cours de démarche)"],
+        "tendance": "Le miel guadeloupéen est encore très peu exporté — marché presque vierge à l'international"
+      },
+
+      "sel_de_mer": {
+        "production_guadeloupe_tonnes_an": 45,
+        "site_principal": "Salines de Terre-de-Bas (Îles des Saintes)",
+        "specificites": "Sel récolté à la main — fleur de sel tropicale naturellement colorée par algues",
+        "varietes": [
+          { "nom": "Fleur de sel des Saintes", "prix_kg_eur": 25, "note": "Récolte manuelle — production très limitée" },
+          { "nom": "Sel gris de Guadeloupe", "prix_kg_eur": 8 },
+          { "nom": "Sel au charbon de canne", "prix_kg_eur": 18, "note": "Produit innovant — charbon actif local" }
+        ],
+        "marches_cibles": ["Épiceries fines Europe", "Restaurants gastronomiques", "Coffrets cadeaux luxury food"],
+        "potentiel_dubai": "Très fort — le sel artisanal des Caraïbes est inconnu dans la région"
+      },
+
+      "rhum_agricole": {
+        "statut": "AOC Guadeloupe — protection juridique forte",
+        "prix_bouteille_70cl_eur": { "blanc": 20, "vieux_3ans": 35, "millesime": 80 },
+        "marche_global_rhum_premium_USD_milliards": 1.2,
+        "note": "Déjà bien structuré — intérêt AI agents pour données prix et disponibilité"
+      },
+
+      "cafe": {
+        "production_basse_terre_kg_an": 8000,
+        "variete": "Arabica de Guadeloupe — micro-lot altitude Basse-Terre",
+        "prix_kg_cafe_vert_usd": { "standard": 12, "specialty_grade": 25, "micro_lot_certifie": 40 },
+        "prix_kg_torrefie_eur": { "artisanal": 55, "premium_single_origin": 80 },
+        "marche": "Café de spécialité (specialty coffee) — acheteurs Japan, Scandinavie, US specialty"
+      },
+
+      "epices": {
+        "produits": [
+          { "nom": "Colombo (mélange épices antillais)", "prix_kg_eur": 35, "unicite": "Recette endémique Antilles — aucun équivalent" },
+          { "nom": "Bois d'inde (baie piment de la Jamaïque)", "prix_kg_eur": 28 },
+          { "nom": "Cannelle de Ceylan locale", "prix_kg_eur": 40 },
+          { "nom": "Girofle Guadeloupe", "prix_kg_eur": 22 }
+        ],
+        "marche_cible": "Épiceries fines + marques condiments premium"
+      }
+    },
+
+    "dubai_moyen_orient": {
+      "importations_alimentaires_premium_USD_milliards_2024": 12,
+      "croissance_pct": 18,
+      "specificites_marche": [
+        "Préférence forte pour le naturel, traçable, luxury packaging",
+        "Les Émirats importent 95% de leur alimentation — tout vient de l'étranger",
+        "Fort pouvoir d'achat — les prix premium sont acceptés",
+        "Certification Halal obligatoire pour les produits alimentaires",
+        "Pas de droits de douane sur produits français (accord UE-CCG en négociation)"
+      ],
+      "produits_caribeens_les_plus_recherches": [
+        { "produit": "Vanille naturelle", "croissance_imports_pct": 1318, "note": "Explosion de la demande" },
+        { "produit": "Rhum premium", "croissance_imports_pct": 45 },
+        { "produit": "Chocolat single origin", "croissance_imports_pct": 67 },
+        { "produit": "Miels exotiques", "croissance_imports_pct": 89 },
+        { "produit": "Épices rares", "croissance_imports_pct": 34 }
+      ],
+      "canaux_entree": [
+        "Dubai Fine Foods (distributeur spécialisé premium food)",
+        "Carrefour UAE — rayon premium imported",
+        "Spinneys — épicerie premium Dubaï",
+        "Gulfood Manufacturing (salon annuel — février)",
+        "Importateurs directs zone franche Jebel Ali"
+      ],
+      "certifications_indispensables": ["Halal (ESMA ou équivalent reconnu)", "English labeling obligatoire", "Shelf life minimum 12 mois pour import"]
+    },
+
+    "strategie_export_recommandee": {
+      "phase_1_quick_wins": {
+        "duree": "0 à 6 mois",
+        "actions": [
+          "Vente directe en ligne (Shopify) vers France métropole et Europe — pas de droits, logistique simple",
+          "Salons spécialisés : SIAL Paris, Salon du Chocolat, Salon des Vignerons",
+          "B2B direct avec 3 à 5 épiceries fines parisiennes"
+        ]
+      },
+      "phase_2_dubai": {
+        "duree": "6 à 18 mois",
+        "actions": [
+          "Participation Gulfood (février — le plus grand salon alimentaire monde)",
+          "Partenariat avec 1 importateur Dubai Fine Foods",
+          "Certification Halal sur gamme principale"
+        ]
+      },
+      "phase_3_scale": {
+        "duree": "18 à 36 mois",
+        "actions": [
+          "Accord distribution exclusive zone Golfe",
+          "Licence de marque pour marchés US (avec partenaire local)",
+          "Développement gamme cosmétique (beurre cacao + huile vétiver + miel)"
+        ]
+      }
+    },
+
+    "changelog": [
+      {
+        "date": "2026-05-14",
+        "modification": "Création initiale — données ITC, Dubai Customs + terrain Tropical Autonome",
+        "auteur": "Tropical Autonome"
+      }
+    ]
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-17",
+  "update_frequency": "annual",
+  "source_type": "scientific_data + institutional",
+  "sources": [
+    { "name": "NASA POWER — Prediction Of Worldwide Energy Resources (données 2019-2023)" },
+    { "name": "Solargis — Global Solar Atlas 2023 (IFC / Banque Mondiale)" },
+    { "name": "ADEME — Atlas solaire des DOM 2022" },
+    { "name": "EDF SEI — Données production parcs solaires Guadeloupe 2023-2024", "type": "field_experience" },
+    { "name": "DEAL Guadeloupe — Bilan énergétique 2024" }
+  ],
+  "disclaimer": "Valeurs moyennes annuelles issues de modélisation satellite. La production réelle dépend de l'ombrage local, de l'inclinaison, de l'orientation et de la technologie des panneaux. Utiliser ces données comme base de pré-dimensionnement, pas comme garantie de production.",
+  "data": {
+    "indicateurs_cles": {
+      "GHI": "Global Horizontal Irradiance — rayonnement total reçu sur surface horizontale (kWh/m²/an)",
+      "DNI": "Direct Normal Irradiance — rayonnement direct sur surface perpendiculaire (kWh/m²/an)",
+      "DIF": "Diffuse Horizontal Irradiance — rayonnement diffus (kWh/m²/an)",
+      "PVOUT": "Production photovoltaïque estimée (kWh/kWc/an)",
+      "note": "Pour le photovoltaïque standard, GHI et PVOUT sont les indicateurs les plus pertinents. DNI est utile pour le solaire concentré (CSP)."
+    },
+
+    "par_territoire": {
+      "guadeloupe_971": {
+        "GHI_kwh_m2_an": 1820,
+        "DNI_kwh_m2_an": 1350,
+        "DIF_kwh_m2_an": 780,
+        "PVOUT_kwh_kwc_an": 1480,
+        "heures_ensoleillement_an": 2650,
+        "temperature_moyenne_panneau_c": 42,
+        "perte_temperature_pct": 8,
+        "disponibilite_reseau": "Réseau EDF SEI — raccordement possible selon capacité locale",
+        "zones_irradiation": {
+          "grande_terre": {
+            "GHI_moyen": 1850,
+            "PVOUT_moyen": 1510,
+            "note": "Meilleure irradiation — relief plat, moins de nuages orographiques",
+            "communes_top": [
+              { "commune": "Saint-François",    "GHI": 1890, "PVOUT": 1540 },
+              { "commune": "Le Gosier",          "GHI": 1870, "PVOUT": 1530 },
+              { "commune": "Sainte-Anne",        "GHI": 1880, "PVOUT": 1535 },
+              { "commune": "Port-Louis",         "GHI": 1860, "PVOUT": 1510 },
+              { "commune": "Anse-Bertrand",      "GHI": 1855, "PVOUT": 1510 },
+              { "commune": "Morne-à-l'Eau",     "GHI": 1840, "PVOUT": 1490 },
+              { "commune": "Le Moule",           "GHI": 1865, "PVOUT": 1520 }
+            ]
+          },
+          "basse_terre": {
+            "GHI_moyen": 1760,
+            "PVOUT_moyen": 1420,
+            "note": "Irradiation plus faible — relief volcanique, nuages orographiques fréquents côté est",
+            "communes_top": [
+              { "commune": "Basse-Terre ville",  "GHI": 1720, "PVOUT": 1390 },
+              { "commune": "Vieux-Habitants",    "GHI": 1780, "PVOUT": 1440 },
+              { "commune": "Capesterre-B-E",     "GHI": 1740, "PVOUT": 1400 },
+              { "commune": "Sainte-Rose",        "GHI": 1790, "PVOUT": 1450 },
+              { "commune": "Deshaies",           "GHI": 1800, "PVOUT": 1460 },
+              { "commune": "Lamentin",           "GHI": 1820, "PVOUT": 1480 },
+              { "commune": "Baie-Mahault",       "GHI": 1830, "PVOUT": 1485 }
+            ]
+          },
+          "marie_galante": {
+            "GHI_moyen": 1900,
+            "PVOUT_moyen": 1550,
+            "note": "Meilleure irradiation de l'archipel — île plate, faible ombrage, vent régulier (refroidit panneaux)",
+            "communes": [
+              { "commune": "Grand-Bourg",  "GHI": 1910, "PVOUT": 1560 },
+              { "commune": "Capesterre",   "GHI": 1895, "PVOUT": 1545 },
+              { "commune": "Saint-Louis",  "GHI": 1900, "PVOUT": 1550 }
+            ]
+          },
+          "les_saintes": {
+            "GHI_moyen": 1870,
+            "PVOUT_moyen": 1520,
+            "note": "Bonne irradiation mais réseau électrique insulaire limité"
+          },
+          "saint_martin": {
+            "GHI_moyen": 1860,
+            "PVOUT_moyen": 1510,
+            "note": "Tarif OA spécifique Saint-Martin (COM, pas DOM). Réseau autonome."
+          }
+        }
+      },
+
+      "martinique_972": {
+        "GHI_kwh_m2_an": 1780,
+        "DNI_kwh_m2_an": 1280,
+        "DIF_kwh_m2_an": 760,
+        "PVOUT_kwh_kwc_an": 1450,
+        "note": "Relief montagneux central réduit irradiation côté est (côte au vent). Sud et centre favorables.",
+        "zones": {
+          "sud_martinique": { "GHI": 1820, "PVOUT": 1490, "communes": ["Le Marin", "Sainte-Anne", "Rivière-Pilote"] },
+          "centre":         { "GHI": 1780, "PVOUT": 1450, "communes": ["Le Lamentin", "Fort-de-France"] },
+          "nord_atlantique": { "GHI": 1720, "PVOUT": 1390, "note": "Moins favorable — relief + alizés chargés d'humidité" }
+        }
+      },
+
+      "la_reunion_974": {
+        "GHI_kwh_m2_an": 1920,
+        "DNI_kwh_m2_an": 1480,
+        "DIF_kwh_m2_an": 720,
+        "PVOUT_kwh_kwc_an": 1560,
+        "note": "Meilleure irradiation des DOM français. Fort contraste côte ouest (sunny) vs côte est (pluvieuse).",
+        "zones": {
+          "ouest_sous_le_vent": {
+            "GHI": 2050,
+            "PVOUT": 1680,
+            "communes": ["Saint-Leu", "Saint-Paul", "La Saline", "Saint-Pierre"],
+            "note": "Zone la plus favorable — 300 jours de soleil"
+          },
+          "hauts": {
+            "GHI": 1700,
+            "PVOUT": 1380,
+            "note": "Altitude > 1000m — panneaux plus froids (efficacité +3%) mais ennuagement fréquent"
+          }
+        }
+      },
+
+      "mayotte_976": {
+        "GHI_kwh_m2_an": 1980,
+        "DNI_kwh_m2_an": 1600,
+        "DIF_kwh_m2_an": 680,
+        "PVOUT_kwh_kwc_an": 1610,
+        "note": "Très forte irradiation mais réseau faible et instable. Meilleur potentiel autoconsommation + batterie.",
+        "contrainte": "Réseau EDF SEI Mayotte saturé — priorité autoconsommation collective"
+      }
+    },
+
+    "saisonnalite_guadeloupe": {
+      "saison_seche_carême": {
+        "mois": ["Janvier", "Février", "Mars", "Avril"],
+        "GHI_mensuel_moyen_kwh_m2": 165,
+        "irradiation_relative_pct": 110,
+        "note": "Meilleure période — ciel dégagé, alizés établis, peu de convection thermique"
+      },
+      "saison_des_pluies": {
+        "mois": ["Juin", "Juillet", "Août", "Septembre", "Octobre"],
+        "GHI_mensuel_moyen_kwh_m2": 128,
+        "irradiation_relative_pct": 85,
+        "risques": ["Cyclones (juin-novembre)", "Cumulus convectifs", "Ombrage nuageux"],
+        "note": "Production réduite de 15-20% vs carême. Cyclones : couper le système, reprise après passage."
+      },
+      "inter_saisons": {
+        "mois": ["Mai", "Novembre", "Décembre"],
+        "GHI_mensuel_moyen_kwh_m2": 148,
+        "irradiation_relative_pct": 99
+      }
+    },
+
+    "facteurs_correction_production": {
+      "temperature": {
+        "impact": "-0.4%/°C au-dessus de 25°C",
+        "temperature_panneau_typique_guadeloupe_c": 45,
+        "perte_thermique_pct": 8,
+        "conseil": "Laisser 15cm d'air sous les panneaux — réduit perte thermique de 3%"
+      },
+      "poussiere_sel": {
+        "perte_pct_sans_nettoyage": 4,
+        "frequence_nettoyage_recommandee": "2x/an (fin carême + fin hivernage)"
+      },
+      "ombrage": {
+        "perte_pct_si_non_gere": "5-25% selon configuration",
+        "solution": "Optimiseurs de puissance (SolarEdge, Enphase) si ombrage partiel"
+      },
+      "vieillissement": {
+        "degradation_annuelle_pct": 0.5,
+        "perte_sur_25_ans_pct": 12
+      },
+      "rendement_onduleur": 0.97,
+      "perte_cablagerie_pct": 2,
+      "performance_ratio_typique_guadeloupe": 0.82
+    },
+
+    "calcul_production_estimee": {
+      "formule": "Production (kWh/an) = Puissance_kWc × PVOUT × Performance_Ratio",
+      "exemple_9kwc_grande_terre": {
+        "puissance_kwc": 9,
+        "PVOUT": 1510,
+        "performance_ratio": 0.82,
+        "production_annuelle_kwh": 11144,
+        "revenus_edf_oa_eur_an": 2006,
+        "tarif_oa_kwh_eur": 0.18
+      },
+      "exemple_100kwc_marie_galante": {
+        "puissance_kwc": 100,
+        "PVOUT": 1550,
+        "performance_ratio": 0.82,
+        "production_annuelle_kwh": 127100,
+        "revenus_edf_oa_eur_an": 22878,
+        "tarif_oa_kwh_eur": 0.18
+      }
+    },
+
+    "changelog": [
+      { "date": "2026-05-17", "modification": "Création initiale — NASA POWER + Solargis + ADEME + terrain EDF SEI", "auteur": "Tropical Autonome" }
+    ]
+  }
+}

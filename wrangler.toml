@@ -1,0 +1,47 @@
+name = "tropical-data-api"
+main = "src/index.js"
+compatibility_date = "2026-05-01"
+compatibility_flags = ["nodejs_compat"]
+
+# ─── KV Namespaces ────────────────────────────────────────────────────
+
+# Données JSON des endpoints (opérateur + fournisseurs)
+[[kv_namespaces]]
+binding = "DATA_STORE"
+id = "1586a3cdecd14e0f983e80367536505e"
+
+# Registre des fournisseurs marketplace
+[[kv_namespaces]]
+binding = "PROVIDERS_STORE"
+id = "be9668dec23146b48d00b743ce2ea2f4"
+
+# Ledger des commissions et reversements
+[[kv_namespaces]]
+binding = "LEDGER_STORE"
+id = "73fb2ff81c324b778202efe1fa3ffb7a"
+
+# ─── Variables publiques ──────────────────────────────────────────────
+
+[vars]
+ENVIRONMENT      = "production"
+API_VERSION      = "v2"
+OPERATOR_NAME    = "Tropical Autonome"
+OPERATOR_CONTACT = "tropicalautonome@gmail.com"
+BASE_RPC_URL     = "https://mainnet.base.org"
+
+# ─── Secrets (wrangler secret put NOM_SECRET) ─────────────────────────
+#
+# PAYMENT_WALLET_ADDRESS   → adresse USDC Base (collecte tous les paiements)
+# ADMIN_API_KEY            → clé admin pour /admin/* (générer avec openssl rand -hex 32)
+# ANTHROPIC_API_KEY        → pour endpoints d'analyse Claude API
+# X402_SECRET              → secret vérification transactions
+#
+# Par fournisseur tiers (remplacer {slug} par le slug réel, tirets → underscores) :
+# PROVIDER_KEY_{slug}      → ex: PROVIDER_KEY_agri_guadeloupe
+#   Générer : openssl rand -hex 24
+
+# ─── Routes ──────────────────────────────────────────────────────────
+# Décommenter quand tropicalautonome.com est configuré dans Cloudflare DNS
+# [[routes]]
+# pattern = "api.tropicalautonome.com/*"
+# zone_name = "tropicalautonome.com"

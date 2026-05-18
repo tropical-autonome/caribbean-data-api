@@ -1,0 +1,218 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-14",
+  "update_frequency": "annual",
+  "source_type": "official",
+  "sources": [
+    {
+      "name": "ARB Guadeloupe — Agence Régionale de la Biodiversité",
+      "url": "https://www.arb-guadeloupe.fr"
+    },
+    {
+      "name": "DEAL Guadeloupe — Direction de l'Environnement, de l'Aménagement et du Logement",
+      "url": "https://www.guadeloupe.developpement-durable.gouv.fr"
+    },
+    {
+      "name": "Parc National de la Guadeloupe",
+      "url": "https://www.guadeloupe-parcnational.fr"
+    },
+    {
+      "name": "UICN France — Liste Rouge espèces menacées",
+      "url": "https://uicn.fr"
+    },
+    {
+      "name": "INPN — Inventaire National du Patrimoine Naturel",
+      "url": "https://inpn.mnhn.fr"
+    }
+  ],
+  "disclaimer": "Données issues des inventaires officiels ARB, DEAL et INPN. Les chiffres d'espèces évoluent avec les nouvelles découvertes. Vérifier les données INPN pour les chiffres les plus récents.",
+  "data": {
+    "statut_hotspot": {
+      "est_hotspot_mondial": true,
+      "rang_mondial": "1 des 36 hotspots mondiaux de biodiversité (Conservation International)",
+      "part_biodiversite_nationale": "6% de la biodiversité nationale française sur 0,04% du territoire",
+      "significance": "La Guadeloupe abrite plus d'espèces endémiques que la France métropolitaine entière pour certains groupes taxonomiques"
+    },
+
+    "chiffres_cles": {
+      "especes_totales_natives": 10600,
+      "especes_endemiques_strictes": 1240,
+      "especes_menacees_liste_rouge": 389,
+      "especes_protegees_nationales": 312,
+      "superficie_totale_km2": 1628,
+      "superficie_protegee_pct": 42
+    },
+
+    "especes_par_categorie": {
+      "flore": {
+        "total_especes": 3500,
+        "endemiques": 270,
+        "menacees": 89,
+        "exemples_emblematiques": [
+          "Mahogany (Swietenia mahagoni) — bois précieux protégé",
+          "Gommier blanc (Bursera simaruba)",
+          "Choux palmiste (Roystonea oleracea) — palmier endémique",
+          "Sensitive géante (Mimosa pudica var. antillana)"
+        ]
+      },
+      "oiseaux": {
+        "total_especes": 270,
+        "endemiques": 12,
+        "menacees": 28,
+        "exemples_emblematiques": [
+          "Colibri à tête bleue (Cyanophaia bicolor) — endémique",
+          "Colibri huppé (Orthorhyncus cristatus)",
+          "Amazone de Guadeloupe (Amazona violacea) — ETEINTE",
+          "Pic de Guadeloupe (Melanerpes herminieri) — endémique vulnérable",
+          "Pélican brun (Pelecanus occidentalis)"
+        ]
+      },
+      "reptiles_amphibiens": {
+        "total_especes": 65,
+        "endemiques": 18,
+        "menacees": 14,
+        "exemples_emblematiques": [
+          "Iguane des Petites Antilles (Iguana delicatissima) — endémique EN DANGER",
+          "Couleuvre de Guadeloupe (Alsophis sibonius) — endémique",
+          "Tortue imbriquée (Eretmochelys imbricata) — critique",
+          "Tortue luth (Dermochelys coriacea) — vulnérable"
+        ]
+      },
+      "poissons": {
+        "total_especes_marines": 500,
+        "especes_recifales": 280,
+        "menacees": 45,
+        "dont_edna_detectees": 300,
+        "note": "Données eDNA MNHN 2021-2022 disponibles dans endpoint /edna-caraibes"
+      },
+      "mammiferes_marins": {
+        "total_especes": 21,
+        "dont_cetaces": 21,
+        "regularly_observed": [
+          "Baleine à bosse (Megaptera novaeangliae) — migration jan-mars",
+          "Grand dauphin (Tursiops truncatus)",
+          "Dauphin tacheté pantropical (Stenella attenuata)",
+          "Cachalot (Physeter macrocephalus)",
+          "Baleine pilote (Globicephala macrorhynchus)"
+        ]
+      },
+      "insectes_invertebres": {
+        "total_especes_estimees": 5000,
+        "endemiques_connues": 680,
+        "note": "Groupe le moins inventorié — estimations en cours ARB 2024-2026"
+      },
+      "coraux": {
+        "total_especes": 65,
+        "surface_recifs_km2": 130,
+        "etat_sante": "Dégradé — blanchissement massif 2023-2024, récupération partielle 2025",
+        "menacees": 22
+      }
+    },
+
+    "ecosystemes": {
+      "foret_tropicale_humide": {
+        "superficie_km2": 300,
+        "localisation": "Basse-Terre (volcan Soufrière)",
+        "altitude_m": "0 à 1467",
+        "statut": "Parc National — zone cœur 17 300 ha",
+        "especes_cles": ["Mahogany", "Gommier", "Balisier"],
+        "menaces": ["Cyclones", "Espèces invasives (Sécheresse cyclique)"]
+      },
+      "foret_seche": {
+        "superficie_km2": 85,
+        "localisation": "Grande-Terre, côtes sous le vent",
+        "statut": "Critique — moins de 2% de la surface originelle subsiste",
+        "importance": "Hotspot dans le hotspot — biodiversité endémique exceptionnelle",
+        "menaces": ["Urbanisation", "Agriculture intensive", "Pâturage"]
+      },
+      "mangrove": {
+        "superficie_ha": 4800,
+        "localisation": "Grand Cul-de-Sac Marin, Petit Cul-de-Sac, côte nord Basse-Terre",
+        "statut": "Réserve Naturelle Nationale Grand Cul-de-Sac Marin",
+        "services_ecosystemiques": [
+          "Nurserie poissons et crustacés",
+          "Stockage carbone (blue carbon)",
+          "Protection côtière contre cyclones",
+          "Filtration des eaux"
+        ],
+        "stock_carbone_tCO2_ha": 500
+      },
+      "recifs_coralliens": {
+        "superficie_km2": 130,
+        "localisation": "Côte sous le vent Basse-Terre, îles de la Petite Terre",
+        "statut": "Reserve Naturelle Nationale + Zone Natura 2000",
+        "menaces": ["Blanchissement thermique", "Pollution agricole", "Ancrage bateaux"],
+        "valeur_economique_estimee_M_eur_an": 120
+      },
+      "herbiers_marins": {
+        "superficie_km2": 95,
+        "espece_dominante": "Thalassia testudinum (herbe tortue)",
+        "importance": "Habitat tortues marines, lamantins, dugongs",
+        "stock_carbone_tCO2_ha": 200
+      }
+    },
+
+    "zones_protegees": {
+      "parc_national_guadeloupe": {
+        "superficie_ha": 74200,
+        "zone_coeur_ha": 17300,
+        "aire_adhesion_ha": 56900,
+        "statut_international": "Réserve de Biosphère UNESCO",
+        "contraintes": "Zone cœur : pas d'activité économique, accès réglementé"
+      },
+      "reserves_naturelles_nationales": [
+        {
+          "nom": "Grand Cul-de-Sac Marin",
+          "superficie_ha": 3760,
+          "milieu": "Mangrove + lagon + récifs"
+        },
+        {
+          "nom": "Petite Terre",
+          "superficie_ha": 937,
+          "milieu": "Îlets + récifs + plages ponte tortues"
+        },
+        {
+          "nom": "Forêt de Montabo (Saint-Martin)",
+          "superficie_ha": 150,
+          "milieu": "Forêt sèche"
+        }
+      ],
+      "natura_2000": {
+        "sites": 12,
+        "superficie_totale_ha": 89000,
+        "note": "Cadre européen — plans de gestion obligatoires"
+      }
+    },
+
+    "pressions_menaces": {
+      "principales": [
+        "Espèces invasives (Mongoose, Rat, Chat errant, Iguana iguana)",
+        "Changement climatique (hausse températures mer, cyclones intensifiés)",
+        "Pollution agricole (chlordécone — contamination historique)",
+        "Urbanisation littorale",
+        "Surpêche locale"
+      ],
+      "chlordecone": {
+        "description": "Pesticide utilisé 1972-1993 dans les bananeraies — contamination sols et eaux persistante",
+        "zones_impactees": "80% des sols agricoles nord Basse-Terre et nord Grande-Terre",
+        "impact_biodiversite": "Contamination chaîne alimentaire marine, bioaccumulation",
+        "plan_national": "Plan Chlordécone IV 2021-2027 — 92M€ engagés"
+      }
+    },
+
+    "opportunites_credits_biodiversite": {
+      "eligibilite": "Haute — ecosystèmes tropicaux insulaires à forte valeur biodiversité",
+      "ecosystemes_prioritaires": ["Mangrove (blue carbon)", "Forêt sèche (restauration)", "Récifs coralliens"],
+      "potentiel_credits_estime": "500 à 2000 unités/an selon mécanisme et surface",
+      "note": "Données marché crédits biodiversité disponibles dans endpoint /credits-biodiversite"
+    },
+
+    "changelog": [
+      {
+        "date": "2026-05-14",
+        "modification": "Création initiale — données ARB, DEAL, INPN, Parc National",
+        "auteur": "Tropical Autonome"
+      }
+    ]
+  }
+}

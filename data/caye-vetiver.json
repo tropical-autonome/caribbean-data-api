@@ -1,0 +1,161 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-14",
+  "update_frequency": "quarterly",
+  "source_type": "market_data + field_experience",
+  "sources": [
+    {
+      "name": "ITC Trade Map — exports huile vétiver 2020-2025",
+      "url": "https://www.trademap.org"
+    },
+    {
+      "name": "Givaudan / Firmenich — rapports matières premières parfumerie 2024"
+    },
+    {
+      "name": "IFEAT — International Federation of Essential Oils and Aroma Trades",
+      "url": "https://ifeat.org"
+    },
+    {
+      "name": "Tropical Autonome — terrain Guadeloupe + réseau parfumerie",
+      "type": "field_experience"
+    }
+  ],
+  "disclaimer": "Le marché du vétiver est dominé par quelques acteurs. Les prix indiqués sont des moyennes — les contrats long terme avec maisons de parfum peuvent être très différents. Données indicatives.",
+  "data": {
+    "marche_mondial": {
+      "taille_USD_millions_2024": 650,
+      "croissance_annuelle_pct": 8,
+      "production_mondiale_tonnes_he_2024": 250,
+      "usage_principal": "Parfumerie fine (80% de la production mondiale)",
+      "autres_usages": ["Aromatiques alimentaires", "Aromathérapie", "Cosmétiques naturels"]
+    },
+
+    "producteurs_mondiaux": {
+      "haiti": {
+        "part_marche_pct": 55,
+        "tonnes_he_annuel": 137,
+        "prix_kg_usd": { "standard": 80, "premium": 120 },
+        "profil": "Vétiver 'Bourbon' — référence mondiale parfumerie luxe. Notes fumées, terreuses, boisées profondes.",
+        "shipments_annuels": 153,
+        "acheteurs_principaux": ["Givaudan", "IFF", "Firmenich", "Robertet"],
+        "problematique": "Instabilité politique + déforestation = risque approvisionnement croissant"
+      },
+      "inde": {
+        "part_marche_pct": 25,
+        "tonnes_he_annuel": 62,
+        "prix_kg_usd": { "standard": 50, "premium": 75 },
+        "profil": "Khus oil — notes plus douces, moins profondes que Haïti. Marché cosmétique et aromatique."
+      },
+      "indonesie": {
+        "part_marche_pct": 12,
+        "tonnes_he_annuel": 30,
+        "prix_kg_usd": { "standard": 45 },
+        "profil": "Qualité variable — bas de gamme à moyen."
+      },
+      "caraibes_guadeloupe": {
+        "part_marche_pct": 1,
+        "statut": "Producteur émergent très confidentiel",
+        "potentiel": "Fort — terroir volcanique Basse-Terre similaire à Haïti",
+        "prix_potentiel_kg_usd": { "standard": 100, "premium_bio": 160, "cru_basse_terre": 200 },
+        "differentiation": "Terroir volcanique unique + stabilité politique France + certification bio + traçabilité"
+      }
+    },
+
+    "vetiver_guadeloupe": {
+      "espece": "Chrysopogon zizanioides (Vetiveria zizanioides)",
+      "zones_production": ["Côte sous le vent Basse-Terre", "Pitons de Bouillante", "Vallées intérieures"],
+      "terroir": {
+        "sol": "Sol volcanique rouge — similaire aux meilleures zones haïtiennes",
+        "altitude": "200 à 600m — idéal pour profil aromatique complexe",
+        "pluviometrie": "1500 à 2500mm/an — optimal"
+      },
+      "profil_aromatique_potentiel": {
+        "notes_dominantes": ["Terreux profond", "Fumé délicat", "Boisé sec", "Légèrement citronné"],
+        "comparaison": "Plus proche du vétiver haïtien que de l'indien — potentiel haute parfumerie",
+        "interet_parfumeurs": "Les noses cherchent des alternatives à Haïti pour sécuriser approvisionnement"
+      },
+      "production": {
+        "surface_estimee_ha": 3,
+        "producteurs_actifs": 2,
+        "duree_culture_avant_recolte_ans": 2,
+        "partie_utilisee": "Racines (distillation vapeur)",
+        "rendement_he_kg_par_tonne_racines": 8,
+        "production_actuelle_kg_he": 25,
+        "note": "Production confidentielle — pas de filière structurée"
+      },
+      "distillation": {
+        "methode": "Entraînement à la vapeur d'eau",
+        "duree_distillation_h": "12 à 18h (racines dures — longue distillation)",
+        "equipement_minimum": "Alambic inox 200L",
+        "cout_installation_eur": 15000,
+        "note": "La durée de distillation est clé pour le profil aromatique — interrompre trop tôt donne un profil appauvri"
+      }
+    },
+
+    "prix_comparatifs_2025": {
+      "unites": "USD par kg — huile essentielle",
+      "haiti_standard": { "prix_usd_kg": 85, "tendance": "Hausse — instabilité politique" },
+      "haiti_premium": { "prix_usd_kg": 130, "marche": "Contrats long terme maisons luxe" },
+      "inde_khus": { "prix_usd_kg": 55, "tendance": "Stable" },
+      "guadeloupe_potentiel_standard": { "prix_usd_kg": 110, "justification": "Terroir volcanique + stabilité + traçabilité" },
+      "guadeloupe_potentiel_bio": { "prix_usd_kg": 165, "justification": "+ certification AB" },
+      "guadeloupe_cru_unique": { "prix_usd_kg": 220, "justification": "Cru unique Basse-Terre + storytelling luxe + volumes limités" },
+      "historique_haiti_5_ans": {
+        "2021": 70,
+        "2022": 80,
+        "2023": 95,
+        "2024": 110,
+        "2025": 85,
+        "note": "Volatilité liée à l'instabilité politique haïtienne"
+      }
+    },
+
+    "marches_cibles": {
+      "parfumerie_luxe_grasse": {
+        "potentiel": "Très élevé",
+        "acheteurs": ["Robertet", "Charabot", "Sozio", "V. Mane Fils"],
+        "volume_par_contrat_kg_an": 20,
+        "prix_acceptable_usd_kg": 180,
+        "condition": "Échantillons + fiche analytique GC-MS obligatoire",
+        "conseil": "Contacter directement les acheteurs matières premières — les salons IFEAT et Esxence sont les bons vecteurs"
+      },
+      "parfumerie_indie_internationale": {
+        "potentiel": "Fort — marché en explosion",
+        "profil": "Créateurs de parfums indépendants cherchent matières rares et traçables",
+        "volume_par_client_kg_an": 2,
+        "prix_acceptable_usd_kg": 200,
+        "canaux": ["Instagram parfumerie niche", "The Perfumer's Apprentice", "Osme Parfums"]
+      },
+      "cosmetique_naturelle_premium": {
+        "potentiel": "Moyen",
+        "usage": "Crème, sérum, huile corps premium — huile vétiver bio",
+        "prix_acceptable_usd_kg": 140,
+        "marches": ["France", "Allemagne", "Scandinavie"]
+      }
+    },
+
+    "avantage_concurrentiel_guadeloupe": [
+      "Stabilité politique et juridique (territoire français) — vs Haïti instable",
+      "Certification bio accessible (territoire UE)",
+      "Traçabilité totale possible (petits volumes)",
+      "Storytelling Caraïbes français premium",
+      "Proximité Europe (transport aérien Pointe-à-Pitre → Paris = 8h)",
+      "Régime DOM — accès marchés UE sans droits de douane"
+    ],
+
+    "risques": [
+      "Volume trop faible pour contrats industriels (minimum 200 kg/an souvent requis)",
+      "Durée de culture 2 ans avant première récolte — besoin de fonds propres",
+      "Expertise distillation à acquérir ou externaliser",
+      "Marché très concentré (quelques grands acheteurs mondiaux)"
+    ],
+
+    "changelog": [
+      {
+        "date": "2026-05-14",
+        "modification": "Création initiale — données ITC, IFEAT + terrain Tropical Autonome",
+        "auteur": "Tropical Autonome"
+      }
+    ]
+  }
+}

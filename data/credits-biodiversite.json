@@ -1,0 +1,196 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-14",
+  "update_frequency": "quarterly",
+  "source_type": "market_data + official_frameworks",
+  "sources": [
+    {
+      "name": "TNFD — Taskforce on Nature-related Financial Disclosures",
+      "url": "https://tnfd.global",
+      "reference": "TNFD Framework v1.0 — 2023"
+    },
+    {
+      "name": "Kunming-Montreal Global Biodiversity Framework",
+      "reference": "COP15 — Décembre 2022 — Objectif 30x30"
+    },
+    {
+      "name": "Verra — Verified Carbon Standard / Biodiversity",
+      "url": "https://verra.org",
+      "reference": "VM0009, VM0038 — biodiversity modules"
+    },
+    {
+      "name": "Plan Vivo Foundation",
+      "url": "https://www.planvivo.org"
+    },
+    {
+      "name": "NatureFinance — State of Nature Markets 2024",
+      "url": "https://www.naturefinance.net"
+    },
+    {
+      "name": "Ecosystem Marketplace — Nature Markets Report 2024"
+    }
+  ],
+  "disclaimer": "Le marché des crédits biodiversité est en forte évolution. Les prix et standards indiqués sont indicatifs et peuvent évoluer rapidement. Consulter un expert en finance nature avant tout engagement.",
+  "data": {
+    "contexte_marche": {
+      "taille_marche_actuel_USD_milliards": 0.3,
+      "taille_marche_projetee_2030_USD_milliards": 2,
+      "taille_marche_projetee_2050_USD_milliards": 69,
+      "source_projection": "World Economic Forum / TNFD 2024",
+      "acceleration": "Les exigences TNFD et la réglementation EU Nature Restoration Law 2024 forcent les entreprises à compenser leur impact biodiversité",
+      "demande_principale": [
+        "Fonds ESG (obligations réglementaires reporting nature)",
+        "Entreprises secteur extractif (mines, BTP, agriculture)",
+        "Secteur financier (banques, assurances — risque nature)",
+        "Compensations obligatoires (projets d'aménagement)"
+      ]
+    },
+
+    "mecanismes_principaux": {
+      "biodiversity_offsets": {
+        "nom": "Compensations biodiversité réglementaires",
+        "description": "Obligation légale pour les projets d'aménagement d'ERC (Éviter, Réduire, Compenser) leur impact sur la biodiversité",
+        "cadre_france": "Loi Biodiversité 2016 — doctrine ERC",
+        "unite": "Unité de compensation biodiversité (UCB) — définie par bureaux d'études certifiés",
+        "prix_france_eur_UCB": "5 000 à 50 000€",
+        "applicabilite_dom": "Applicable en Guadeloupe — compensations projets DEAL",
+        "acheteurs": "Aménageurs, constructeurs, opérateurs énergie"
+      },
+
+      "credits_volontaires": {
+        "nom": "Crédits biodiversité volontaires",
+        "description": "Marché volontaire — entreprises achètent des crédits pour financer la conservation au-delà des obligations légales",
+        "prix_USD_unite": {
+          "minimum": 5,
+          "moyen": 25,
+          "premium_ecosystemes_tropicaux": 50,
+          "premium_biodiversite_certifiee_edna": 75,
+          "note": "Les prix augmentent de 20-30% par an depuis 2022"
+        },
+        "standards_certification": {
+          "plan_vivo": {
+            "nom": "Plan Vivo Standard",
+            "specialite": "Communautés rurales + biodiversité + carbone",
+            "anciennete": "Fondé 1994 — le plus ancien standard nature",
+            "processus_certification": "18 à 36 mois",
+            "cout_certification": "30 000 à 80 000€",
+            "pertinence_guadeloupe": "Haute — adapté aux projets communautaires insulaires"
+          },
+          "verra_ccb": {
+            "nom": "Verra CCB (Climate, Community and Biodiversity Standards)",
+            "specialite": "Projets REDD+ avec co-bénéfices biodiversité",
+            "processus_certification": "24 à 48 mois",
+            "cout_certification": "50 000 à 150 000€",
+            "pertinence_guadeloupe": "Moyenne — plutôt adapté aux grandes forêts tropicales"
+          },
+          "tnfd_nature_positive": {
+            "nom": "TNFD Nature Positive Framework",
+            "description": "Cadre de reporting et de certification pour les projets contribuant à l'objectif nature-positive",
+            "statut": "Framework v1.0 adopté 2023 — certifications pilotes 2024-2025",
+            "pertinence": "Référence pour les grands fonds ESG"
+          },
+          "biocredits_naturemetrics": {
+            "nom": "BioCredits (NatureMetrics)",
+            "description": "Crédits basés sur mesure eDNA + bioacoustique — vérification scientifique rigoureuse",
+            "differentiation": "Seul standard avec preuve ADN des espèces présentes",
+            "prix_premium": "+20 à 40% vs crédits standard",
+            "pertinence_guadeloupe": "Très haute — données eDNA MNHN disponibles comme baseline"
+          }
+        }
+      },
+
+      "kunming_montreal_30x30": {
+        "description": "Accord international COP15 — protéger 30% des terres et mers d'ici 2030",
+        "implication_guadeloupe": "Déjà à 42% de territoire protégé — position favorable pour vendre des crédits",
+        "opportunite": "Les pays peuvent vendre des crédits biodiversité issus de surfaces protégées supplémentaires"
+      }
+    },
+
+    "applicabilite_ecosystemes_caribeens": {
+      "mangrove_guadeloupe": {
+        "eligibilite": "Haute",
+        "double_credit": "Blue carbon (carbone) + biodiversité (valeur cumulée)",
+        "prix_combine_USD_tCO2eq": "15 à 45",
+        "surface_eligible_ha": 4800,
+        "revenus_potentiels_USD_an": {
+          "scenario_conservateur": 72000,
+          "scenario_optimiste": 216000,
+          "note": "Basé sur 4 800 ha × 10 tCO2eq/ha/an × 15 à 45 USD"
+        }
+      },
+      "foret_seche": {
+        "eligibilite": "Très haute — écosystème critique mondial",
+        "rareté": "Moins de 2% surface originelle — rareté = prix premium",
+        "prix_USD_unite": "40 à 100",
+        "projet_type": "Restauration forêt sèche + monitoring eDNA"
+      },
+      "recifs_coralliens": {
+        "eligibilite": "Haute — mais complexité juridique (zone maritime)",
+        "prix_USD_unite": "30 à 80",
+        "condition": "Nécessite partenariat avec état et collectivité"
+      },
+      "herbiers_marins": {
+        "eligibilite": "Haute — blue carbon reconnu",
+        "stock_carbone_tCO2_ha": 200,
+        "prix_USD_tCO2eq": "20 à 60"
+      }
+    },
+
+    "montage_projet_type": {
+      "titre": "Projet crédit biodiversité mangrove + eDNA Guadeloupe",
+      "etapes": [
+        {
+          "phase": "1. Baseline eDNA",
+          "duree": "6 mois",
+          "cout": "30 000 à 60 000€",
+          "action": "Inventaire eDNA complet mangrove + recifs + herbiers — 20 stations"
+        },
+        {
+          "phase": "2. Choix standard + certification",
+          "duree": "12 à 18 mois",
+          "cout": "50 000 à 100 000€",
+          "action": "Dossier Plan Vivo ou BioCredits NatureMetrics"
+        },
+        {
+          "phase": "3. Vente crédits",
+          "duree": "Continu sur 10 à 30 ans",
+          "revenus_annuels_estimes": "100 000 à 500 000€/an selon surface et standard",
+          "action": "Marketplace dédiée ou broker (South Pole, Xpansiv, ACX)"
+        }
+      ],
+      "partenaires_cles": [
+        "ARB Guadeloupe (données + légitimité)",
+        "NatureMetrics (eDNA + certification)",
+        "MNHN (données scientifiques baseline)",
+        "Région Guadeloupe (foncier + FEDER)"
+      ]
+    },
+
+    "plateformes_echange": {
+      "xpansiv_cbx": {
+        "nom": "Xpansiv CBX",
+        "description": "Principale bourse mondiale crédits carbone/biodiversité",
+        "url": "https://xpansiv.com",
+        "acces": "Via brokers accrédités"
+      },
+      "south_pole": {
+        "nom": "South Pole",
+        "description": "Broker + développeur de projets nature — présence DOM possible",
+        "url": "https://www.southpole.com"
+      },
+      "acx": {
+        "nom": "ACX (AirCarbon Exchange)",
+        "description": "Exchange basé à Singapour — forte présence fonds asiatiques ESG",
+        "url": "https://www.aircarbon.co"
+      }
+    },
+
+    "changelog": [
+      {
+        "date": "2026-05-14",
+        "modification": "Création initiale — données TNFD, Plan Vivo, Verra, NatureMetrics, marché 2024",
+        "auteur": "Tropical Autonome"
+      }
+    ]
+  }
+}

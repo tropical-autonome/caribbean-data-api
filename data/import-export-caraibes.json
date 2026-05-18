@@ -1,0 +1,203 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-17",
+  "update_frequency": "quarterly",
+  "source_type": "market_data + customs_data + institutional + field_experience",
+  "sources": [
+    { "name": "Douanes françaises — Statistiques commerce extérieur Guadeloupe + Martinique 2024" },
+    { "name": "IEDOM — Rapport commerce extérieur DOM 2024" },
+    { "name": "CARICOM Trade Data — Flux intra-caribéens 2023" },
+    { "name": "Dubai Trade Portal — Imports fruits tropicaux + produits alimentaires 2024" },
+    { "name": "ITC Trade Map — International Trade Centre 2024" },
+    { "name": "Tropical Autonome — réseau logisticiens + exportateurs Guadeloupe 2022-2025", "type": "field_experience" }
+  ],
+  "disclaimer": "Statistiques douanières agrégées. Les flux réels peuvent différer selon la déclaration des opérateurs. Prix CIF/FOB indicatifs — négocier directement avec les transitaires.",
+  "data": {
+    "vue_generale_caraibes": {
+      "exports_totaux_dom_francais_milliards_eur": 1.8,
+      "imports_totaux_dom_francais_milliards_eur": 8.4,
+      "solde_commercial_milliards_eur": -6.6,
+      "note": "Les DOM français sont structurellement importateurs. Le déficit commercial est compensé par les transferts publics (État) et le tourisme. Opportunité : développer les exportations de produits à haute valeur ajoutée."
+    },
+
+    "guadeloupe_exports": {
+      "total_exports_eur_millions": 285,
+      "top_produits_exportes": [
+        {
+          "produit": "Banane fraîche",
+          "code_nc": "0803",
+          "valeur_eur_millions": 85,
+          "volume_tonnes": 62000,
+          "destination_principale": "France métropole (95%)",
+          "prix_fob_eur_kg": 0.38,
+          "note": "Marché captif métropole. Peu de marge pour diversification court terme."
+        },
+        {
+          "produit": "Rhum agricole (AOC)",
+          "code_nc": "2208",
+          "valeur_eur_millions": 48,
+          "volume_litres": 3200000,
+          "destinations": ["France métropole (60%)", "Allemagne (12%)", "Belgique (8%)", "Autres Europe (12%)", "USA (8%)"],
+          "prix_fob_eur_litre": 15.00,
+          "note": "Produit premium à forte valeur. Croissance export USA et Asie. Distilleries : Reimonenq, Damoiseau, Longueteau, Bielle (Marie-Galante)."
+        },
+        {
+          "produit": "Sucre roux (cassonade)",
+          "code_nc": "1701",
+          "valeur_eur_millions": 28,
+          "volume_tonnes": 48000,
+          "destination_principale": "France métropole (TEREOS)",
+          "prix_fob_eur_tonne": 583
+        },
+        {
+          "produit": "Melons et fruits exotiques",
+          "code_nc": "0807 / 0810",
+          "valeur_eur_millions": 18,
+          "destinations": ["France métropole", "Europe du Nord"],
+          "produits_details": ["Melon Guadeloupe", "Goyave", "Fruit de la passion", "Ananas Victoria"]
+        },
+        {
+          "produit": "Produits de la mer (poissons, crustacés)",
+          "code_nc": "0302 / 0306",
+          "valeur_eur_millions": 12,
+          "destinations": ["France métropole", "Martinique", "Saint-Martin"],
+          "note": "Sous-exploité — potentiel de doublement via certification et logistique frigorifique améliorée"
+        },
+        {
+          "produit": "Huiles essentielles et extraits végétaux",
+          "code_nc": "3301",
+          "valeur_eur_millions": 4,
+          "produits": ["Vétiver (minime — potentiel fort)", "Vanille (émergent)", "Ylang-ylang"],
+          "prix_fob_eur_kg": { "vetiver": 180, "vanille_gousses": 350 },
+          "potentiel_croissance": "Fort — marché parfumerie luxe sous-adressé"
+        }
+      ],
+      "top_destinations_export": [
+        { "pays": "France métropole", "part_pct": 65, "note": "Flux naturel — pas de droits de douane" },
+        { "pays": "Martinique", "part_pct": 12 },
+        { "pays": "Saint-Martin / Sint-Maarten", "part_pct": 5 },
+        { "pays": "Allemagne", "part_pct": 4, "produit_cle": "Rhum agricole" },
+        { "pays": "USA", "part_pct": 3, "produit_cle": "Rhum premium" },
+        { "pays": "Autres", "part_pct": 11 }
+      ]
+    },
+
+    "guadeloupe_imports": {
+      "total_imports_eur_millions": 2100,
+      "top_produits_importes": [
+        { "produit": "Hydrocarbures (carburants)", "valeur_eur_millions": 420, "part_pct": 20 },
+        { "produit": "Véhicules automobiles", "valeur_eur_millions": 210, "part_pct": 10 },
+        { "produit": "Produits alimentaires transformés", "valeur_eur_millions": 380, "part_pct": 18 },
+        { "produit": "Équipements électriques et électroniques", "valeur_eur_millions": 165, "part_pct": 8 },
+        { "produit": "Matériaux de construction", "valeur_eur_millions": 148, "part_pct": 7 },
+        { "produit": "Médicaments et produits pharmaceutiques", "valeur_eur_millions": 125, "part_pct": 6 }
+      ],
+      "origine_imports": [
+        { "pays": "France métropole", "part_pct": 55 },
+        { "pays": "Zone euro", "part_pct": 18 },
+        { "pays": "USA", "part_pct": 8 },
+        { "pays": "Asie (Chine + autres)", "part_pct": 12 },
+        { "pays": "Caraïbes régionales", "part_pct": 5 },
+        { "pays": "Autres", "part_pct": 2 }
+      ]
+    },
+
+    "opportunites_export_dubai": {
+      "contexte_emirats": {
+        "imports_alimentaires_totaux_milliards_usd": 12.4,
+        "self_sufficiency_alimentaire_pct": 15,
+        "note": "Les Émirats importent 85% de leur alimentation. Marché premium avec forte demande produits naturels, biologiques, exotiques."
+      },
+      "produits_caraibes_opportunites": [
+        {
+          "produit": "Rhum agricole premium",
+          "potentiel": "Fort",
+          "contexte": "Marché spirits premium en croissance à Dubai (+15%/an). Rhum artisanal caribéen = authenticité recherchée.",
+          "prix_cif_dubai_usd_litre": 45,
+          "contrainte": "Marché alcool réglementé aux EAU — licences import obligatoires. Canaux : hôtels 5*, duty-free.",
+          "importateurs_cles": ["MMI (Maritime & Mercantile International)", "African + Eastern"]
+        },
+        {
+          "produit": "Vanille Guadeloupe / Caraïbes",
+          "potentiel": "Très fort",
+          "contexte": "Dubai = hub rexportation vers tout le Moyen-Orient. Marché pâtisserie + parfumerie halal en explosion.",
+          "prix_cif_dubai_usd_kg_gousses": 380,
+          "avantage_halal": "Aucun problème d'éligibilité — produit végétal",
+          "importateurs_cles": ["Hana International", "Al Maya Group"]
+        },
+        {
+          "produit": "Huiles essentielles premium (vétiver, ylang)",
+          "potentiel": "Fort",
+          "contexte": "Parfumerie de niche Dubai = 4e marché mondial. Oud + exotiques tropicaux très recherchés.",
+          "prix_cif_dubai_usd_kg": { "vetiver": 250, "ylang": 80 },
+          "format_recommande": "B2B direct avec maisons de parfumerie Dubai (ex: Abdul Samad Al Qurashi)"
+        },
+        {
+          "produit": "Poissons et crustacés surgelés",
+          "potentiel": "Moyen",
+          "contexte": "Certification Halal obligatoire pour les poissons (abattage rituel non requis — poissons = halal par nature). Crustacés vivants = débat jurisprudentiel.",
+          "contrainte_principale": "Shelf life minimum 18 mois → surgelé seulement. Fret maritime depuis Guadeloupe = 22 jours.",
+          "prix_cif_dubai_usd_kg": { "vivaneau_surgele": 14, "dorade_coryphene_surgelee": 9 }
+        },
+        {
+          "produit": "Produits transformés (confitures, rhum non-alcoolisé, épices)",
+          "potentiel": "Croissant",
+          "contexte": "Trend 'Caribbean lifestyle' en Dubai. Boutiques concept + duty-free aéroport DXB.",
+          "format_recommande": "Coffrets cadeaux premium — emballage bilingue anglais/arabe"
+        }
+      ],
+      "logistique_guadeloupe_dubai": {
+        "fret_maritime": {
+          "duree_jours": 22,
+          "cout_container_20pieds_usd": 2800,
+          "transit": "Via port de Pointe-à-Pitre → transbordement Fort-de-France ou Miami → Dubai (Jebel Ali)"
+        },
+        "fret_aerien": {
+          "duree_jours": 2,
+          "cout_eur_kg": 6.5,
+          "applicable": "Produits frais haute valeur (vanille, huiles essentielles)"
+        },
+        "transitaires_locaux": [
+          { "nom": "Maritima Guadeloupe", "specialite": "Export maritime Caraïbes" },
+          { "nom": "STACI Antilles", "specialite": "Groupage + fret aérien" }
+        ]
+      }
+    },
+
+    "flux_intra_caraibes": {
+      "volume_echanges_milliards_usd": 2.1,
+      "note": "Les échanges intra-caribéens restent faibles malgré CARICOM. Barrières : douanes hétérogènes, logistique coûteuse, monnaies multiples.",
+      "opportunites": [
+        { "flux": "Guadeloupe → Martinique", "produits": ["Rhum (re-export)", "Poissons", "Légumes-pays"], "valeur_eur_millions": 145 },
+        { "flux": "Guadeloupe → Saint-Martin", "produits": ["Produits frais", "Matériaux construction"], "valeur_eur_millions": 78 },
+        { "flux": "Guadeloupe → Dominique", "produits": ["Produits transformés", "Équipements"], "valeur_eur_millions": 22 }
+      ]
+    },
+
+    "cadre_reglementaire_export": {
+      "depuis_guadeloupe_dom": {
+        "vers_ue": "Libre circulation — pas de droits de douane, pas de formalités douanières (DOM = dans l'UE douanière)",
+        "vers_pays_tiers": "Export soumis déclaration douanière EX1. Contrôle DGDDI Guadeloupe.",
+        "phytosanitaire": "Certification phytosanitaire SRAL DAAF pour produits végétaux frais",
+        "produits_cites": "Lambis, tortues, coraux — exportation internationale interdite sans permis CITES"
+      },
+      "certifications_valorisantes": [
+        { "label": "AOC Rhum Agricole Guadeloupe", "impact": "Prime prix +35% sur marchés export" },
+        { "label": "Agriculture Biologique (AB)", "impact": "Prime prix +20-40% — marchés nord-européens et dubai premium" },
+        { "label": "Fairtrade / Commerce Équitable", "impact": "Accès marchés GMS nord-européens et nord-américains" },
+        { "label": "IFS / BRC (sécurité alimentaire)", "impact": "Obligatoire pour entrée GMS internationaux" }
+      ]
+    },
+
+    "contacts_export": [
+      { "organisme": "Business France Antilles", "role": "Accompagnement export PME", "web": "businessfrance.fr" },
+      { "organisme": "CCI Guadeloupe — Service International", "role": "VIE, foires, missions export" },
+      { "organisme": "Dubai Chamber of Commerce", "role": "Mise en relation acheteurs EAU", "web": "dubaichamber.com" },
+      { "organisme": "DGDDI Guadeloupe (Douanes)", "role": "Formalités export, nomenclature NC", "tel": "0590 60 32 00" }
+    ],
+
+    "changelog": [
+      { "date": "2026-05-17", "modification": "Création initiale — Douanes françaises + IEDOM + ITC Trade Map + terrain Tropical Autonome", "auteur": "Tropical Autonome" }
+    ]
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-15",
+  "update_frequency": "quarterly",
+  "source_type": "market_data + field_experience + institutional",
+  "sources": [
+    { "name": "ODEADOM — Office de Développement de l'Économie Agricole des DOM 2024" },
+    { "name": "DPMA — Direction des Pêches Maritimes et de l'Aquaculture 2024" },
+    { "name": "CROSS Antilles-Guyane — données débarquements 2023-2024" },
+    { "name": "FranceAgriMer — filière pêche Antilles 2024" },
+    { "name": "CARICOM Fisheries — Caribbean regional data 2023" },
+    { "name": "Tropical Autonome — réseau mareyeurs + restaurateurs Guadeloupe 2024", "type": "field_experience" }
+  ],
+  "disclaimer": "Prix au débarquement indicatifs — varient selon saison, météo, demande locale. Prix restauration/export calculés sur base terrain 2024.",
+  "data": {
+    "vue_generale_caraibes": {
+      "production_totale_caraibes_tonnes_an": 190000,
+      "valeur_totale_usd_millions": 420,
+      "part_peche_artisanale_pct": 85,
+      "emplois_directs": 42000,
+      "note": "La pêche artisanale caribéenne est sous-valorisée : 85% de la production vendue localement sans transformation ni certification"
+    },
+
+    "guadeloupe": {
+      "production_tonnes_an": 8500,
+      "navires_actifs": 1200,
+      "type_flotte": "Artisanale (moins de 12m) — 95% des navires",
+      "ports_principaux": [
+        { "nom": "Saint-François", "specialite": "Langoustes, poissons pélagiques", "volume_tonnes_an": 1200 },
+        { "nom": "Capesterre-Marie-Galante", "specialite": "Dorade coryphène, thon", "volume_tonnes_an": 900 },
+        { "nom": "Pointe-à-Pitre (Bergevin)", "specialite": "Marché central — toutes espèces", "volume_tonnes_an": 2100 },
+        { "nom": "Deshaies", "specialite": "Espèces récifales, vivaneau", "volume_tonnes_an": 600 },
+        { "nom": "Sainte-Anne", "specialite": "Langoustes, lambis", "volume_tonnes_an": 700 }
+      ],
+      "especes_principales": {
+        "dorade_coryphene": {
+          "nom_local": "Dorado / Mahi-mahi",
+          "saison_pic": ["Novembre", "Décembre", "Janvier", "Février"],
+          "prix_debarquement_eur_kg": 4.50,
+          "prix_poissonnier_eur_kg": 8.00,
+          "prix_restaurant_eur_kg": 18.00,
+          "prix_export_eur_kg": 7.50,
+          "volume_annuel_tonnes": 1800,
+          "marches_export": ["France métropole", "Martinique", "Saint-Martin"]
+        },
+        "thon_germon": {
+          "nom_local": "Thon blanc",
+          "saison_pic": ["Juin", "Juillet", "Août"],
+          "prix_debarquement_eur_kg": 3.80,
+          "prix_poissonnier_eur_kg": 6.50,
+          "prix_export_eur_kg": 6.00,
+          "volume_annuel_tonnes": 900
+        },
+        "langouste_caraibes": {
+          "nom_scientifique": "Panulirus argus",
+          "saison_peche": "Octobre à mars (fermée avril-septembre — reproduction)",
+          "prix_debarquement_eur_kg": 18.00,
+          "prix_poissonnier_eur_kg": 28.00,
+          "prix_restaurant_eur_kg": 55.00,
+          "prix_export_vivant_eur_kg": 35.00,
+          "volume_annuel_tonnes": 280,
+          "note": "Espèce sous pression — quota annuel fixé par arrêté préfectoral"
+        },
+        "vivaneau": {
+          "nom_local": "Vivaneau / Snapper",
+          "saison": "Toute l'année (pic décembre-mars)",
+          "prix_debarquement_eur_kg": 6.00,
+          "prix_poissonnier_eur_kg": 10.00,
+          "prix_restaurant_eur_kg": 22.00,
+          "volume_annuel_tonnes": 600
+        },
+        "lambis": {
+          "nom_scientifique": "Strombus gigas",
+          "statut": "CITES Annexe II — commerce international réglementé",
+          "peche": "Autorisée localement avec quotas stricts",
+          "prix_debarquement_eur_kg_chair": 12.00,
+          "prix_restaurant_eur_kg": 30.00,
+          "note": "Interdit d'exportation vivant hors UE — vente locale uniquement"
+        },
+        "ouassou": {
+          "nom_scientifique": "Macrobrachium rosenbergii",
+          "type": "Crevette d'eau douce (rivières Basse-Terre)",
+          "prix_debarquement_eur_kg": 20.00,
+          "prix_restaurant_eur_kg": 45.00,
+          "volume_annuel_kg": 15000,
+          "note": "Production très limitée — très recherché par restaurants gastronomiques"
+        }
+      }
+    },
+
+    "martinique": {
+      "production_tonnes_an": 5800,
+      "navires_actifs": 850,
+      "particularites": "Forte tradition de pêche hauturière. Part DCP (Dispositifs de Concentration de Poissons) élevée.",
+      "prix_moyen_debarquement_eur_kg": 4.20,
+      "especes_dominantes": ["Dorade coryphène", "Thon obèse", "Espadon", "Mahi-mahi"]
+    },
+
+    "opportunites_marche": {
+      "restauration_locale": {
+        "demande": "Forte et mal satisfaite — restaurants haut de gamme manquent de régularité d'approvisionnement",
+        "prix_premium_accepte": "+40% vs prix poissonnier standard pour livraison directe pêcheur-restaurant",
+        "circuit_court": "Modèle AMAP poisson en développement à Guadeloupe — abonnements hebdomadaires"
+      },
+      "export_france_metropole": {
+        "especes_rentables": ["Langouste (vivant sous glace)", "Dorade coryphène (surgelée)", "Vivaneau (frais sous vide)"],
+        "logistique": "Fret aérien obligatoire pour frais — coût 3-5€/kg selon volume",
+        "prix_net_export_eur_kg": {
+          "langouste_congelee": 28,
+          "dorade_coryphene_congelee": 6,
+          "vivaneau_frais": 9
+        },
+        "operateurs_rungis": ["Réunion des Marchands de Poissons Exotiques (Rungis)", "SCAMPI Import-Export"]
+      },
+      "dubai_halal": {
+        "potentiel": "Fort — les Émirats importent 85% de leurs fruits de mer",
+        "especes_interessantes": ["Langouste", "Dorade", "Thon"],
+        "contraintes": ["Certification Halal obligatoire (abattage rituel pour crustacés vivants — non applicable)", "Logistique longue distance complexe", "Shelf life minimum 18 mois requis → surgelé seulement"],
+        "conclusion": "Réaliste uniquement pour produits surgelés certifiés. Marché France métropole plus accessible à court terme."
+      },
+      "transformation_locale": {
+        "produits_a_developper": [
+          { "produit": "Rillettes de thon antillais", "prix_pot_200g_eur": 6.50, "marge_vs_matiere_brute": "+300%" },
+          { "produit": "Accras de morue / poisson", "prix_kg_pret_cuire_eur": 12.00 },
+          { "produit": "Langouste surgelée préparée", "prix_kg_eur": 45.00 },
+          { "produit": "Fumet de poisson artisanal", "prix_litre_eur": 8.00 }
+        ]
+      }
+    },
+
+    "reglementation": {
+      "tailles_minimales_capture": {
+        "langouste": "Carapace > 9cm (Guadeloupe) — sinon remise à l'eau obligatoire",
+        "lambis": "Lèvre de la coquille développée et évasée — adultes seulement",
+        "ouassou": "Pas de taille minimale réglementaire mais pratique traditionnelle"
+      },
+      "fermetures_biologiques": {
+        "langouste": "1 avril au 30 septembre — reproduction",
+        "lambis": "1 juin au 31 octobre",
+        "oursins": "Variables selon arrêtés préfectoraux annuels"
+      },
+      "certifications_disponibles": {
+        "peche_durable_msc": { "statut": "Aucune pêcherie caribéenne certifiée MSC à date", "interet": "Fort pour export Europe — prime prix +15-20%" },
+        "label_rouge": { "statut": "En cours d'instruction pour langouste des Antilles françaises" },
+        "ig_indication_geographique": { "statut": "Projet IG Langouste des Antilles françaises — non encore accordée" }
+      }
+    },
+
+    "contacts_institutionnels": [
+      { "organisme": "CRPMEM Guadeloupe", "role": "Comité Régional des Pêches — représentation professionnelle", "tel": "0590 82 82 82" },
+      { "organisme": "DPMA Antilles", "role": "Direction des Pêches — réglementation", "web": "agriculture.gouv.fr/dpma" },
+      { "organisme": "ODEADOM", "role": "Financements filière pêche DOM", "web": "odeadom.fr" }
+    ],
+
+    "changelog": [
+      { "date": "2026-05-15", "modification": "Création initiale — données ODEADOM + CROSS + terrain réseau mareyeurs Guadeloupe", "auteur": "Tropical Autonome" }
+    ]
+  }
+}

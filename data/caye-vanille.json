@@ -1,0 +1,166 @@
+{
+  "version": "1.0",
+  "last_verified": "2026-05-14",
+  "update_frequency": "quarterly",
+  "source_type": "market_data + field_experience",
+  "periode_observee": "2021-2026",
+  "sources": [
+    {
+      "name": "ITC — International Trade Centre",
+      "url": "https://www.trademap.org",
+      "reference": "Données exports vanille 2020-2025"
+    },
+    {
+      "name": "FAO — Organisation des Nations Unies pour l'Alimentation",
+      "url": "https://www.fao.org/faostat"
+    },
+    {
+      "name": "CIRAD — Centre de coopération internationale en recherche agronomique",
+      "url": "https://www.cirad.fr"
+    },
+    {
+      "name": "Tropical Autonome — expérience terrain Guadeloupe + réseau acheteurs premium",
+      "type": "field_experience",
+      "periode": "2021-2026"
+    },
+    {
+      "name": "Vanilla Company — Rapports marché 2024-2025"
+    }
+  ],
+  "disclaimer": "Prix indicatifs — le marché de la vanille est volatile. Vérifier les cours actuels avant toute négociation. Les prix terrain peuvent différer significativement des prix export selon qualité, conditionnement et acheteur.",
+  "data": {
+    "marche_mondial": {
+      "taille_USD_milliards_2024": 2.1,
+      "croissance_2024_pct": 76,
+      "drivers_croissance": [
+        "Demande clean label — les industriels remplacent arômes synthétiques par vanille naturelle",
+        "Explosion marché Dubai et Moyen-Orient (+1318% imports UAE en 1 an)",
+        "Premium alimentaire post-COVID — consommateurs payent plus pour naturel",
+        "Pénurie Madagascar 2023-2024 (cyclones + sécheresse)"
+      ],
+      "production_mondiale_tonnes_2024": 8500,
+      "principaux_producteurs": {
+        "madagascar": { "part_pct": 80, "tonnes": 6800, "prix_kg_usd": { "planifolia_grade_a": 250, "planifolia_standard": 150 } },
+        "indonesie": { "part_pct": 10, "tonnes": 850, "prix_kg_usd": { "planifolia": 120 } },
+        "tahiti": { "part_pct": 3, "tonnes": 255, "prix_kg_usd": { "tahitensis_grade_a": 600, "tahitensis_standard": 400 } },
+        "ouganda": { "part_pct": 4, "tonnes": 340, "prix_kg_usd": { "planifolia": 130 } },
+        "caraibes_guadeloupe": { "part_pct": 0.5, "tonnes": 42, "statut": "Producteur émergent — volume limité mais prix premium justifié", "prix_kg_usd_potentiel": { "planifolia_bio_certifie": 500, "planifolia_premium": 350 } }
+      }
+    },
+
+    "vanille_guadeloupe": {
+      "espece": "Vanilla planifolia (principalement) + Vanilla pompona (vanillon antillais)",
+      "specificites": {
+        "profil_aromatique": "Notes florales et épicées plus prononcées que Madagascar — teneur en vanilline légèrement inférieure mais complexité aromatique supérieure selon les parfumeurs",
+        "terroir": "Sol volcanique Basse-Terre + climat tropical humide = profil unique",
+        "vanillon_antillais": {
+          "nom_scientifique": "Vanilla pompona",
+          "specificite": "Espèce endémique Antilles — notes héliotrope, caramel, amande — très prisée en parfumerie",
+          "prix_potentiel_kg_usd": 800,
+          "marche_principal": "Parfumerie de niche, maisons de luxe (Guerlain, Dior...)",
+          "production_actuelle": "Très confidentielle — quelques dizaines de kg/an"
+        }
+      },
+      "calendrier": {
+        "floraison": "Février à mai (pollinisation manuelle obligatoire)",
+        "fructification": "9 mois après pollinisation",
+        "recolte": "Novembre à février",
+        "maturation_echaudage": "3 à 6 mois après récolte (process crucial pour qualité)"
+      },
+      "production_guadeloupe": {
+        "surface_estimee_ha": 12,
+        "producteurs_actifs": 8,
+        "production_annuelle_kg_frais": 3000,
+        "rendement_seche": "5 kg frais → 1 kg sec",
+        "production_seche_kg": 600,
+        "note": "Production artisanale — pas de filière structurée à ce jour"
+      },
+      "process_qualite": {
+        "echaudage": "Trempage eau chaude 65°C pendant 3 minutes — stoppe la fermentation",
+        "etuvage": "48h en caisse isolée — déclenche les réactions enzymatiques (vanilline)",
+        "sechage": "45 à 90 jours au soleil + à l'ombre — teneur eau finale 30-35%",
+        "conditionnement_premium": "Gousses individuelles en tube verre ou boîte métallique — marque terroir obligatoire"
+      }
+    },
+
+    "prix_comparatifs_2025": {
+      "unites": "USD par kg — gousses sèches qualité grade A",
+      "madagascar_planifolia": { "prix_usd_kg": 250, "variation_annuelle_pct": -15, "note": "Baisse post-pénurie 2023" },
+      "tahiti_tahitensis": { "prix_usd_kg": 600, "variation_annuelle_pct": 5, "note": "Stable — marché niche parfumerie" },
+      "indonesie_planifolia": { "prix_usd_kg": 120, "variation_annuelle_pct": -10, "note": "Bas de gamme industriel" },
+      "guadeloupe_planifolia_bio": { "prix_usd_kg_potentiel": 400, "premium_justification": "Terroir AOP potentiel + traçabilité + bio + Caraïbes = premium 60% vs Madagascar", "note": "Prix marché à construire — peu de références" },
+      "guadeloupe_pompona": { "prix_usd_kg_potentiel": 800, "marche": "Parfumerie luxe — prix négocié directement avec maisons" },
+      "historique_5_ans": {
+        "2021": 500,
+        "2022": 450,
+        "2023": 600,
+        "2024": 300,
+        "2025": 250,
+        "note": "Forte volatilité liée aux conditions climatiques Madagascar"
+      }
+    },
+
+    "marches_cibles": {
+      "dubai_emirats": {
+        "potentiel": "Très élevé",
+        "croissance_imports_vanille_2024_pct": 1318,
+        "profil_acheteur": "Importateurs pour pâtisserie de luxe, hôtellerie 5 étoiles, marchés spécialisés",
+        "volume_import_annuel_tonnes": 45,
+        "prix_accepte_usd_kg": 400,
+        "canaux": ["Dubai Fine Foods", "Carrefour UAE premium", "Importateurs Deira"],
+        "certifications_requises": ["Halal", "ISO 22000 ou BRC", "Traçabilité lot"]
+      },
+      "europe_premium": {
+        "pays_cibles": ["France", "Allemagne", "Pays-Bas", "Royaume-Uni"],
+        "profil_acheteur": "Chocolatiers artisans, pâtisseries premium, épiceries fines",
+        "prix_accepte_usd_kg": 350,
+        "canaux": ["Rungis marché international", "Salons Sial/Fancy Food", "Épiceries fines online"],
+        "certifications_requises": ["Agriculture Biologique UE", "Origine Guadeloupe traçable"]
+      },
+      "etats_unis": {
+        "potentiel": "Élevé",
+        "marche_vanilla_naturelle_USD_milliards": 0.8,
+        "profil_acheteur": "Artisan food brands, cosmétiques naturels, parfumerie indie",
+        "prix_accepte_usd_kg": 380,
+        "canaux": ["Specialty Food Association", "Natural Products Expo West", "Amazon Premium Foods"],
+        "certifications_requises": ["USDA Organic", "Non-GMO Project"]
+      },
+      "parfumerie_luxe": {
+        "potentiel": "Exceptionnel pour Vanilla pompona",
+        "profil_acheteur": "Maisons de parfum (Grasse, Paris), noses indépendants",
+        "prix_accepte_usd_kg": 800,
+        "volume": "Faible — 10 à 50 kg/an par maison",
+        "canaux": ["Contact direct maisons de parfum", "Fragrance Foundation", "Salon de la Parfumerie Grasse"]
+      }
+    },
+
+    "certifications_recommandees": [
+      {
+        "nom": "Agriculture Biologique (AB) — Label UE",
+        "valeur_ajoutee": "+30 à 50% prix",
+        "duree_conversion": "3 ans",
+        "cout_annuel_eur": 800,
+        "organisme_certificateur": "Ecocert, Bureau Veritas"
+      },
+      {
+        "nom": "Appellation d'Origine Protégée (AOP)",
+        "valeur_ajoutee": "+50 à 100% prix",
+        "statut": "En cours de démarche — filière vanille Guadeloupe en construction",
+        "note": "La Vanilla pompona (vanillon antillais) est candidate naturelle à une AOP Antilles"
+      },
+      {
+        "nom": "Fairtrade / Commerce Équitable",
+        "valeur_ajoutee": "+15 à 25% prix",
+        "marche_cible": "Europe du Nord, UK"
+      }
+    ],
+
+    "changelog": [
+      {
+        "date": "2026-05-14",
+        "modification": "Création initiale — données marché ITC/FAO + terrain Tropical Autonome",
+        "auteur": "Tropical Autonome"
+      }
+    ]
+  }
+}
