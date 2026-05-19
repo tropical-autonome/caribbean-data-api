@@ -7,7 +7,8 @@
  * ajoutant la commission de la marketplace (25% par défaut).
  *
  * Prix en USDC (1 USDC = 1 USD)
- * Dernière mise à jour : 14 mai 2026
+ * Dernière mise à jour : 18 mai 2026
+ * Repricing v2 : ×5 sur données premium uniques, micro-paiements sur données standards
  */
 
 // ─── Endpoints Tropical Autonome (opérateur) ────────────────────────
@@ -15,44 +16,44 @@
 export const PRICING = {
 
   // MODULE A — Énergie Solaire ZNI
-  'edf-oa-tarifs-zni':          '0.005',
-  'raccordement-guadeloupe':    '0.010',
-  'analyse-rentabilite':        '0.500',
+  'edf-oa-tarifs-zni':          '0.020',   // tarifs réglementés — point d'entrée
+  'raccordement-guadeloupe':    '0.020',
+  'analyse-rentabilite':        '0.500',   // analyse IA — garder
   'cession-projet':             '0.050',
 
   // MODULE B — Fiscalité & Financement DOM
-  'fiscalite-244w':             '0.020',
-  'financement-dom':            '0.020',
+  'fiscalite-244w':             '0.100',   // données fiscales uniques ×5
+  'financement-dom':            '0.050',
   'fiscalite-analyse':          '1.000',
 
   // MODULE C — Produits Caribéens Premium (CAYE)
-  'caye-vanille':               '0.030',
-  'caye-vetiver':               '0.030',
+  'caye-vanille':               '0.050',
+  'caye-vetiver':               '0.050',
   'caye-marche-premium':        '0.050',
   'caye-analyse-export':        '0.500',
 
   // MODULE D — Biodiversité Caraïbes
-  'biodiversite-guadeloupe':    '0.010',
-  'edna-caraibes':              '0.020',
-  'credits-biodiversite':       '0.050',
+  'biodiversite-guadeloupe':    '0.050',
+  'edna-caraibes':              '0.100',   // données scientifiques MNHN uniques ×5
+  'credits-biodiversite':       '0.100',   // marché ESG en explosion ×2
 
   // MODULE E — PME DOM
-  'pme-guadeloupe-profils':     '0.020',
+  'pme-guadeloupe-profils':     '0.050',
 
   // MODULE F — Foncier & Pêche Caraïbes
-  'foncier-agricole-dom':       '0.030',
-  'peche-artisanale-caraibes':  '0.020',
+  'foncier-agricole-dom':       '0.050',
+  'peche-artisanale-caraibes':  '0.050',
 
   // MODULE G — Solaire avancé & Tourisme
-  'irradiation-solaire-dom':     '0.010',
-  'tourisme-durable-guadeloupe': '0.025',
+  'irradiation-solaire-dom':     '0.020',
+  'tourisme-durable-guadeloupe': '0.050',
 
   // MODULE H — Commerce & Infrastructures
-  'import-export-caraibes':      '0.030',
-  'eau-assainissement-dom':      '0.020',
+  'import-export-caraibes':      '0.050',
+  'eau-assainissement-dom':      '0.050',
 
   // MODULE I — Données Temps Réel (gouvernementales)
-  'marches-publics-guadeloupe':  '0.015',
+  'marches-publics-guadeloupe':  '0.030',  // temps réel récurrent — accessible
   'marches-publics-dom':         '0.025',
 };
 
