@@ -24,6 +24,8 @@ import { handleIrradiation }                                      from './handle
 import { handleTourisme }                                         from './handlers/tourisme.js';
 import { handleImportExport }                                     from './handlers/import-export.js';
 import { handleEau }                                              from './handlers/eau.js';
+import { handleMarchesPublics }                                   from './handlers/marches-publics.js';
+import { handleMarchesPublicsDom }                                from './handlers/marches-publics-dom.js';
 import { handleMarketplace }                   from './marketplace/router.js';
 import { handleAdmin }                         from './handlers/admin-providers.js';
 import { PRICING }                             from './config/pricing.js';
@@ -58,6 +60,9 @@ const OPERATOR_ROUTES = {
   // MODULE H — Commerce & Infrastructures
   'GET /api/v1/commerce/import-export':    { handler: handleImportExport, priceKey: 'import-export-caraibes' },
   'GET /api/v1/infrastructure/eau-dom':    { handler: handleEau,          priceKey: 'eau-assainissement-dom' },
+  // MODULE I — Données Temps Réel
+  'GET /api/v1/marches-publics/guadeloupe': { handler: handleMarchesPublics,    priceKey: 'marches-publics-guadeloupe' },
+  'GET /api/v1/marches-publics/dom':        { handler: handleMarchesPublicsDom, priceKey: 'marches-publics-dom' },
 };
 
 // ─── Worker principal ──────────────────────────────────────────────────

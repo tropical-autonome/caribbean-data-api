@@ -50,6 +50,10 @@ export const PRICING = {
   // MODULE H — Commerce & Infrastructures
   'import-export-caraibes':      '0.030',
   'eau-assainissement-dom':      '0.020',
+
+  // MODULE I — Données Temps Réel (gouvernementales)
+  'marches-publics-guadeloupe':  '0.015',
+  'marches-publics-dom':         '0.025',
 };
 
 // ─── Commission marketplace ──────────────────────────────────────────

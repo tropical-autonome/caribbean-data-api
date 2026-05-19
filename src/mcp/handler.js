@@ -25,6 +25,8 @@ import { handleIrradiation }                                      from '../handl
 import { handleTourisme }                                         from '../handlers/tourisme.js';
 import { handleImportExport }                                     from '../handlers/import-export.js';
 import { handleEau }                                              from '../handlers/eau.js';
+import { handleMarchesPublics }                                   from '../handlers/marches-publics.js';
+import { handleMarchesPublicsDom }                                from '../handlers/marches-publics-dom.js';
 import { listProviders, getProvider, getProviderEndpoint } from '../marketplace/registry.js';
 import { handleMarketplaceX402 }              from '../middleware/x402.js';
 import { creditLedger }                       from '../marketplace/commission.js';
@@ -301,6 +303,8 @@ const OPERATOR_MAP = {
   'caribbean_get_tourisme_guadeloupe':  { path: '/api/v1/tourisme/guadeloupe',          method: 'GET',  priceKey: 'tourisme-durable-guadeloupe', handler: handleTourisme },
   'caribbean_get_import_export':        { path: '/api/v1/commerce/import-export',       method: 'GET',  priceKey: 'import-export-caraibes',      handler: handleImportExport },
   'caribbean_get_eau_dom':              { path: '/api/v1/infrastructure/eau-dom',       method: 'GET',  priceKey: 'eau-assainissement-dom',      handler: handleEau },
+  'caribbean_get_marches_publics':      { path: '/api/v1/marches-publics/guadeloupe',   method: 'GET',  priceKey: 'marches-publics-guadeloupe',   handler: handleMarchesPublics },
+  'caribbean_get_marches_publics_dom':  { path: '/api/v1/marches-publics/dom',          method: 'GET',  priceKey: 'marches-publics-dom',          handler: handleMarchesPublicsDom },
 };
 
 function buildFakeRequest(path, method, txHash, body) {
@@ -592,6 +596,39 @@ const ALL_TOOLS = [
       type: 'object',
       properties: {
         payment_tx_hash: { type: 'string', description: 'Hash tx USDC Base (0x+64hex). Absent = instructions paiement.' },
+      },
+      required: [],
+    },
+    annotations: { readOnlyHint: true },
+  },
+  {
+    name:        'caribbean_get_marches_publics_dom',
+    description: `Marchés publics tous DOM en temps réel — 31 000+ contrats (Guadeloupe 971, Martinique 972, Guyane 973, La Réunion 974, Mayotte 976). DECP officielle. Filtres : département, nature, année. Prix : ${PRICING['marches-publics-dom']} USDC.`,
+    inputSchema: {
+      type: 'object',
+      properties: {
+        payment_tx_hash: { type: 'string', description: 'Hash tx USDC Base (0x+64hex). Absent = instructions paiement.' },
+        limit:       { type: 'number', description: 'Nombre de résultats (max 100, défaut 20)' },
+        offset:      { type: 'number', description: 'Pagination' },
+        nature:      { type: 'string', description: 'Travaux | Fournitures | Services' },
+        annee:       { type: 'string', description: 'Ex: 2024' },
+        departement: { type: 'string', description: '971 | 972 | 973 | 974 | 976' },
+      },
+      required: [],
+    },
+    annotations: { readOnlyHint: true },
+  },
+  {
+    name:        'caribbean_get_marches_publics',
+    description: `Marchés publics Guadeloupe (971) en temps réel — 4 400+ contrats depuis la base DECP officielle. Filtres : nature (Travaux/Fournitures/Services), année, pagination. Données fraîches à chaque appel. Prix : ${PRICING['marches-publics-guadeloupe']} USDC.`,
+    inputSchema: {
+      type: 'object',
+      properties: {
+        payment_tx_hash: { type: 'string', description: 'Hash tx USDC Base (0x+64hex). Absent = instructions paiement.' },
+        limit:  { type: 'number', description: 'Nombre de résultats (max 100, défaut 20)' },
+        offset: { type: 'number', description: 'Pagination (défaut 0)' },
+        nature: { type: 'string', description: 'Filtrer par nature : Travaux | Fournitures | Services' },
+        annee:  { type: 'string', description: 'Filtrer par année ex: 2024' },
       },
       required: [],
     },
